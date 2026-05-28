@@ -551,25 +551,43 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
   <div class="alert alert-amber">
     <span class="alert-icon">🔬</span>
     <div class="alert-body">
-      <strong>Usage data from your AI Consumption Forecast spreadsheet (all dates to 27 May 2026)</strong>
-      Four active orgs identified. Sandbox C is consuming more ERs than Production — almost certainly the Draw Down Agent in development by CloudKaptan.
+      <strong>Prompt template data from AI Consumption Forecast (Mar–27 May 2026) — 5 orgs, 4,613 rows</strong>
+      Two significant findings: Sandbox C is using the new Agentforce 2.0 framework (Atlas), and Sandbox A has Income Verification prompts already in development — not "Ideate" as listed.
+    </div>
+  </div>
+
+  <!-- Key intelligence callouts -->
+  <div class="g2" style="margin-bottom:14px">
+    <div class="card" style="border-color:rgba(167,139,250,0.3);background:linear-gradient(135deg,rgba(167,139,250,0.06),var(--card))">
+      <div class="section-label" style="color:var(--purple)">🔍 Finding 1 — Draw Down uses Agentforce 2.0</div>
+      <div style="font-size:13px;margin-top:6px;line-height:1.7">
+        Sandbox C's dominant prompts are <code style="font-size:11px;color:var(--purple)">Atlas__AgentGraphReasoningPrompt</code> and <code style="font-size:11px;color:var(--purple)">Atlas__StructuredOutputPrompt</code> — the new <strong>Agentforce 2.0 graph-based framework</strong>, not the legacy ReAct loop used by CCT in production.<br><br>
+        This answers George's question: <strong>yes, they are using the new Agent Builder</strong> — but only for Draw Down. CCT in production still runs on the legacy framework. This also explains why Sandbox C burns so many more ERs per invocation than production: the new framework makes more LLM calls per reasoning step.
+      </div>
+    </div>
+    <div class="card" style="border-color:rgba(52,211,153,0.3);background:linear-gradient(135deg,rgba(52,211,153,0.06),var(--card))">
+      <div class="section-label" style="color:var(--green)">🔍 Finding 2 — Income Verification is already in dev</div>
+      <div style="font-size:13px;margin-top:6px;line-height:1.7">
+        Sandbox A contains active prompt templates: <code style="font-size:11px;color:var(--green)">Payslip_Extraction_prompt</code>, <code style="font-size:11px;color:var(--green)">Payslip_Eligibility_Validator</code>, and <code style="font-size:11px;color:var(--green)">Payslip_Batch_Extractor</code>.<br><br>
+        The use case plan lists Income Verification as <strong>"Ideate"</strong> — but someone is already building it. This is also the DC Companion org, suggesting the team is experimenting with Data Cloud + Agentforce together, which aligns with the Unified Fraud Detection roadmap item too.
+      </div>
     </div>
   </div>
 
   <!-- Overview Charts -->
   <div class="g2" style="margin-bottom:14px">
     <div class="card">
-      <div class="section-label">Einstein Requests by Org</div>
+      <div class="section-label">Total Credit Consumption by Org (token-weighted)</div>
       <div class="chart-box chart-box-md"><canvas id="erByOrgChart"></canvas></div>
     </div>
     <div class="card">
-      <div class="section-label">Einstein Requests by Feature</div>
+      <div class="section-label">Agent Framework Split — Legacy ReAct vs Agentforce 2.0 (Atlas)</div>
       <div class="chart-box chart-box-md"><canvas id="erByFeatureChart"></canvas></div>
     </div>
   </div>
 
   <!-- Per-org breakdown -->
-  <div class="section-label" style="margin-bottom:12px">Per-Org Breakdown</div>
+  <div class="section-label" style="margin-bottom:12px">Per-Org Prompt Template Detail</div>
   <div class="g2" style="gap:12px">
 
     <!-- Production -->
@@ -577,7 +595,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
       <div class="org-header">
         <div>
           <div class="org-name">🟢 LMoney AU — Production</div>
-          <div class="org-id">00D7F000006PYjvUAG</div>
+          <div class="org-id">00D7F000006PYjvUAG · Legacy ReAct framework</div>
         </div>
         <div class="org-total">
           <div class="org-total-num" style="color:var(--red)">233,192 <span style="font-size:14px;color:var(--muted)">ER</span></div>
@@ -586,60 +604,80 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
       </div>
       <div class="org-features">
         <div class="feature-row" style="padding-top:10px">
-          <div class="feature-name">EmployeeAssistant (Agent LLM calls)<small>GenAiPromptTemplate · 10× multiplier</small></div>
-          <div class="feature-bar-wrap"><div class="feature-bar" style="width:70%;background:var(--red)"></div></div>
-          <div class="feature-num" style="color:var(--red)">163,870</div>
+          <div class="feature-name">AiCopilot__ReactInitialPrompt<small>Core ReAct reasoning loop — 41% of all prod consumption</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:100%;background:var(--red)"></div></div>
+          <div class="feature-num" style="color:var(--red)">41.3%</div>
         </div>
         <div class="feature-row">
-          <div class="feature-name">PromptTemplateGenerationsInvocable<small>GenAiPromptTemplate · 4× multiplier</small></div>
-          <div class="feature-bar-wrap"><div class="feature-bar" style="width:29%;background:var(--amber)"></div></div>
-          <div class="feature-num" style="color:var(--amber)">68,592</div>
+          <div class="feature-name">Document_Identification_Prompt<small>Custom: classifies document type → ID Verification Agent</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:24.7%;background:var(--amber)"></div></div>
+          <div class="feature-num" style="color:var(--amber)">10.2%</div>
         </div>
         <div class="feature-row">
-          <div class="feature-name">ReportFormulaGeneration<small>Likely non-agent usage</small></div>
-          <div class="feature-bar-wrap"><div class="feature-bar" style="width:0.5%;background:var(--muted)"></div></div>
-          <div class="feature-num" style="color:var(--muted)">730</div>
+          <div class="feature-name">Application_Summarization_Prompt<small>Custom: summarises loan application → Application Verification Agent</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:24.7%;background:var(--amber);opacity:0.8"></div></div>
+          <div class="feature-num" style="color:var(--amber)">10.2%</div>
         </div>
-        <div class="feature-row" style="padding-top:10px;padding-bottom:10px">
-          <div class="feature-name" style="color:var(--teal)">Flex — GenAiFunctionDefinition (actions)<small>20× multiplier per action execution</small></div>
-          <div class="feature-bar-wrap"><div class="feature-bar" style="width:100%;background:var(--teal)"></div></div>
-          <div class="feature-num" style="color:var(--teal)">13,400</div>
+        <div class="feature-row">
+          <div class="feature-name">Agent_Output_Concatenation_Prompt<small>Merges multi-step agent outputs into final response</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:24.5%;background:var(--amber);opacity:0.6"></div></div>
+          <div class="feature-num" style="color:var(--muted)">10.1%</div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-name">Data_Extraction_for_ID_Document<small>Custom: extracts structured fields from driver's licence</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:5%;background:var(--muted)"></div></div>
+          <div class="feature-num" style="color:var(--muted)">2.1%</div>
+        </div>
+        <div class="feature-row" style="padding-bottom:10px">
+          <div class="feature-name">(unlabelled)<small>Direct framework calls without template attribution</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:62%;background:var(--muted);opacity:0.4"></div></div>
+          <div class="feature-num" style="color:var(--muted)">26.1%</div>
         </div>
       </div>
     </div>
 
     <!-- Sandbox C -->
-    <div class="org-card" style="border-color:rgba(251,191,36,0.25)">
+    <div class="org-card" style="border-color:rgba(167,139,250,0.3)">
       <div class="org-header">
         <div>
-          <div class="org-name">🟡 Sandbox C — Draw Down Dev <span style="font-size:11px;font-weight:400;color:var(--amber)">(highest ER consumer)</span></div>
-          <div class="org-id">00D9r000001Jj2TEAS</div>
+          <div class="org-name">🟡 Sandbox C — Draw Down Dev</div>
+          <div class="org-id">00D9r000001Jj2TEAS · <span style="color:var(--purple)">Agentforce 2.0 (Atlas) framework</span></div>
         </div>
         <div class="org-total">
           <div class="org-total-num" style="color:var(--amber)">244,658 <span style="font-size:14px;color:var(--muted)">ER</span></div>
-          <div class="org-total-label">No Flex recorded</div>
+          <div class="org-total-label">No Flex recorded yet</div>
         </div>
       </div>
       <div class="org-features">
         <div class="feature-row" style="padding-top:10px">
-          <div class="feature-name">EmployeeAssistant (Agent LLM calls)<small>GenAiPromptTemplate · 10× multiplier</small></div>
-          <div class="feature-bar-wrap"><div class="feature-bar" style="width:92%;background:var(--amber)"></div></div>
-          <div class="feature-num" style="color:var(--amber)">225,836</div>
+          <div class="feature-name">Atlas__AgentGraphReasoningPrompt<small style="color:var(--purple)">Agentforce 2.0 graph reasoning — new framework, more LLM calls per step</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:100%;background:var(--purple)"></div></div>
+          <div class="feature-num" style="color:var(--purple)">18.2%</div>
         </div>
         <div class="feature-row">
-          <div class="feature-name">PromptTemplateGenerationsInvocable<small>GenAiPromptTemplate · 4× multiplier</small></div>
-          <div class="feature-bar-wrap"><div class="feature-bar" style="width:8%;background:var(--amber);opacity:0.6"></div></div>
-          <div class="feature-num" style="color:var(--muted)">18,706</div>
+          <div class="feature-name">AiCopilot__ReactInitialPrompt<small>Legacy ReAct also present — likely parallel testing</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:23.6%;background:var(--amber)"></div></div>
+          <div class="feature-num" style="color:var(--amber)">4.3%</div>
         </div>
         <div class="feature-row">
-          <div class="feature-name">PromptBuilderPreview + ExplainFormula<small>Minor tooling usage</small></div>
-          <div class="feature-bar-wrap"><div class="feature-bar" style="width:0.05%;background:var(--muted)"></div></div>
-          <div class="feature-num" style="color:var(--muted)">116</div>
+          <div class="feature-name">Atlas__StructuredOutputPrompt<small>Extracts structured JSON from Atlas agent output</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:25.3%;background:var(--purple);opacity:0.6"></div></div>
+          <div class="feature-num" style="color:var(--muted)">4.6%</div>
         </div>
-        <div class="feature-row" style="padding:10px 0">
-          <div class="feature-name" style="color:var(--muted);font-style:italic">No Flex Credits recorded<small>Draw Down actions not yet being tracked or agent not yet using action tools</small></div>
-          <div class="feature-bar-wrap"></div>
-          <div class="feature-num">—</div>
+        <div class="feature-row">
+          <div class="feature-name">SignedContractExtractor<small style="color:var(--teal)">Custom: extracts fields from signed loan contracts → Draw Down Agent</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:5%;background:var(--teal)"></div></div>
+          <div class="feature-num" style="color:var(--teal)">0.9%</div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-name">Application_Summarization_Prompt + Agent_Output_Concatenation_Prompt<small>CCT templates also present — Draw Down may reuse CCT components</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:7.5%;background:var(--amber);opacity:0.5"></div></div>
+          <div class="feature-num" style="color:var(--muted)">1.4%</div>
+        </div>
+        <div class="feature-row" style="padding-bottom:10px">
+          <div class="feature-name">(unlabelled)<small>68% of consumption has no template attribution — direct framework calls in testing</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:100%;background:var(--muted);opacity:0.3"></div></div>
+          <div class="feature-num" style="color:var(--muted)">68.3%</div>
         </div>
       </div>
     </div>
@@ -649,7 +687,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
       <div class="org-header">
         <div>
           <div class="org-name">🔵 Sandbox B — CCT Testing</div>
-          <div class="org-id">00D9r000006zngHEAQ</div>
+          <div class="org-id">00D9r000006zngHEAQ · Legacy ReAct framework</div>
         </div>
         <div class="org-total">
           <div class="org-total-num" style="color:var(--blue)">180,164 <span style="font-size:14px;color:var(--muted)">ER</span></div>
@@ -658,74 +696,89 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
       </div>
       <div class="org-features">
         <div class="feature-row" style="padding-top:10px">
-          <div class="feature-name">EmployeeAssistant (Agent LLM calls)<small>GenAiPromptTemplate · 10× multiplier</small></div>
-          <div class="feature-bar-wrap"><div class="feature-bar" style="width:38%;background:var(--blue)"></div></div>
-          <div class="feature-num" style="color:var(--blue)">69,600</div>
+          <div class="feature-name">AiCopilot__ReactInitialPrompt<small>Core ReAct reasoning loop — matches production CCT pattern</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:100%;background:var(--blue)"></div></div>
+          <div class="feature-num" style="color:var(--blue)">38.4%</div>
         </div>
         <div class="feature-row">
-          <div class="feature-name">(Unlabelled — direct API calls)<small>No feature_developer_name recorded</small></div>
-          <div class="feature-bar-wrap"><div class="feature-bar" style="width:50%;background:var(--blue);opacity:0.5"></div></div>
-          <div class="feature-num" style="color:var(--muted)">90,980</div>
+          <div class="feature-name">Document_Identification_Prompt + Application_Summarization_Prompt<small>Same CCT custom templates as production</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:15.6%;background:var(--blue);opacity:0.6"></div></div>
+          <div class="feature-num" style="color:var(--muted)">6.1%</div>
         </div>
         <div class="feature-row">
-          <div class="feature-name">PromptTemplateGenerationsInvocable<small>GenAiPromptTemplate · 4× multiplier</small></div>
-          <div class="feature-bar-wrap"><div class="feature-bar" style="width:11%;background:var(--blue);opacity:0.4"></div></div>
-          <div class="feature-num" style="color:var(--muted)">19,584</div>
+          <div class="feature-name">0hf9r000000mg3QAAQ / OAAQ / NAAQ (3 unresolved IDs)<small>Prompt template IDs not yet named — likely new CCT templates under development</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:24.8%;background:var(--blue);opacity:0.4"></div></div>
+          <div class="feature-num" style="color:var(--muted)">9.5%</div>
         </div>
-        <div class="feature-row" style="padding:10px 0">
-          <div class="feature-name" style="color:var(--teal)">Flex — GenAiFunctionDefinition (actions)<small>16–20× multiplier</small></div>
-          <div class="feature-bar-wrap"><div class="feature-bar" style="width:35%;background:var(--teal)"></div></div>
-          <div class="feature-num" style="color:var(--teal)">4,656</div>
+        <div class="feature-row" style="padding-bottom:10px">
+          <div class="feature-name">(unlabelled)<small>42.7% direct calls — likely raw framework testing</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:100%;background:var(--muted);opacity:0.35"></div></div>
+          <div class="feature-num" style="color:var(--muted)">42.7%</div>
         </div>
       </div>
     </div>
 
     <!-- Sandbox A -->
-    <div class="org-card">
+    <div class="org-card" style="border-color:rgba(52,211,153,0.25)">
       <div class="org-header">
         <div>
-          <div class="org-name">⚪ Sandbox A — DC Companion / Marketing</div>
-          <div class="org-id">00D750000000MmCEAU</div>
+          <div class="org-name">⚪ Sandbox A — DC Companion</div>
+          <div class="org-id">00D750000000MmCEAU · <span style="color:var(--green)">Income Verification already in dev</span></div>
         </div>
         <div class="org-total">
-          <div class="org-total-num" style="color:var(--green)">0 <span style="font-size:14px;color:var(--muted)">ER</span></div>
-          <div class="org-total-label">8,894 Flex only</div>
+          <div class="org-total-num" style="color:var(--green)">Flex only</div>
+          <div class="org-total-label">8,894 Flex Credits</div>
         </div>
       </div>
       <div class="org-features">
         <div class="feature-row" style="padding-top:10px">
-          <div class="feature-name">EmployeeAssistant (Flex)<small>GenAiPromptTemplate · 4× multiplier</small></div>
-          <div class="feature-bar-wrap"><div class="feature-bar" style="width:85%;background:var(--teal)"></div></div>
-          <div class="feature-num" style="color:var(--teal)">7,148</div>
+          <div class="feature-name">Payslip_Extraction_prompt<small style="color:var(--green)">Income Verification Agent — extracts structured data from payslips</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:30%;background:var(--green)"></div></div>
+          <div class="feature-num" style="color:var(--green)">Active</div>
         </div>
         <div class="feature-row">
-          <div class="feature-name">GenAiFunctionDefinition (actions)<small>16–20× multiplier</small></div>
-          <div class="feature-bar-wrap"><div class="feature-bar" style="width:57%;background:var(--teal);opacity:0.6"></div></div>
-          <div class="feature-num" style="color:var(--muted)">5,072</div>
+          <div class="feature-name">Payslip_Eligibility_Validator<small style="color:var(--green)">Income Verification Agent — validates payslip against lending criteria</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:30%;background:var(--green);opacity:0.8"></div></div>
+          <div class="feature-num" style="color:var(--green)">Active</div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-name">Payslip_Batch_Extractor<small style="color:var(--green)">Income Verification Agent — batch processing variant</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:30%;background:var(--green);opacity:0.6"></div></div>
+          <div class="feature-num" style="color:var(--green)">Active</div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-name">Atlas__AgentGraphReasoningPrompt + Atlas__StructuredOutputPrompt<small>Also using Agentforce 2.0 framework — consistent with Income Verification being built on new stack</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:40%;background:var(--purple);opacity:0.5"></div></div>
+          <div class="feature-num" style="color:var(--purple)">A2.0</div>
         </div>
         <div class="feature-row" style="padding-bottom:10px">
-          <div class="feature-name">PromptBuilderPreview + PromptTemplateGenerationsInvocable<small>Dev/preview tooling</small></div>
-          <div class="feature-bar-wrap"><div class="feature-bar" style="width:8%;background:var(--teal);opacity:0.3"></div></div>
-          <div class="feature-num" style="color:var(--muted)">674</div>
+          <div class="feature-name">einstein_gpt__authoringAgent* templates<small>Agent Builder authoring tools — someone actively using the setup UI</small></div>
+          <div class="feature-bar-wrap"><div class="feature-bar" style="width:8%;background:var(--muted);opacity:0.5"></div></div>
+          <div class="feature-num" style="color:var(--muted)">Dev</div>
         </div>
       </div>
     </div>
 
   </div>
 
-  <!-- Feature glossary -->
+  <!-- Prompt template reference -->
   <div class="card mt2">
-    <div class="section-label">Feature Name Glossary</div>
+    <div class="section-label">Prompt Template Reference</div>
     <table class="data-table" style="margin-top:8px">
-      <thead><tr><th>Feature Developer Name</th><th>What it means</th><th>Multiplier</th></tr></thead>
+      <thead><tr><th>Template Name</th><th>Agent / Purpose</th><th>Framework</th></tr></thead>
       <tbody>
-        <tr><td><code style="font-size:11px;color:var(--blue)">EmployeeAssistant</code></td><td>Agent LLM reasoning calls — the core AI work per agent invocation</td><td style="color:var(--amber)">10×</td></tr>
-        <tr><td><code style="font-size:11px;color:var(--blue)">PromptTemplateGenerationsInvocable</code></td><td>Prompt template invocations — structured prompts called by flows or Apex</td><td style="color:var(--amber)">4×</td></tr>
-        <tr><td><code style="font-size:11px;color:var(--blue)">GenAiFunctionDefinition</code></td><td>Action executions — each tool/action the agent calls (drives Flex Credits)</td><td style="color:var(--teal)">16–20×</td></tr>
-        <tr><td><code style="font-size:11px;color:var(--blue)">ReportFormulaGeneration</code></td><td>Einstein in Report Builder — unrelated to agents, low volume</td><td style="color:var(--muted)">10×</td></tr>
-        <tr><td><code style="font-size:11px;color:var(--blue)">PromptBuilderPreview</code></td><td>Prompt Builder in Setup — developer tooling only, not production usage</td><td style="color:var(--muted)">2–4×</td></tr>
-        <tr><td><code style="font-size:11px;color:var(--blue)">ExplainFormula</code></td><td>Formula field AI explanation feature — minor one-off usage</td><td style="color:var(--muted)">10×</td></tr>
-        <tr><td><code style="font-size:11px;color:var(--blue)">(unlabelled)</code></td><td>Direct API calls without feature attribution — likely raw agent framework calls in testing</td><td style="color:var(--muted)">10×</td></tr>
+        <tr><td><code style="font-size:11px;color:var(--red)">AiCopilot__ReactInitialPrompt</code></td><td>Core reasoning loop — used by every CCT agent invocation</td><td style="color:var(--muted)">Legacy ReAct</td></tr>
+        <tr><td><code style="font-size:11px;color:var(--purple)">Atlas__AgentGraphReasoningPrompt</code></td><td>Core reasoning loop for Draw Down (new Agentforce 2.0)</td><td style="color:var(--purple)">Agentforce 2.0</td></tr>
+        <tr><td><code style="font-size:11px;color:var(--purple)">Atlas__StructuredOutputPrompt</code></td><td>JSON output extraction for Agentforce 2.0 agents</td><td style="color:var(--purple)">Agentforce 2.0</td></tr>
+        <tr><td><code style="font-size:11px;color:var(--blue)">Application_Summarization_Prompt</code></td><td>Application Verification Agent — summarises loan application data</td><td style="color:var(--muted)">Custom</td></tr>
+        <tr><td><code style="font-size:11px;color:var(--blue)">Document_Identification_Prompt</code></td><td>ID Verification Agent — classifies document type before extraction</td><td style="color:var(--muted)">Custom</td></tr>
+        <tr><td><code style="font-size:11px;color:var(--blue)">Data_Extraction_for_ID_Document</code></td><td>ID Verification Agent — extracts structured fields from driver's licence</td><td style="color:var(--muted)">Custom</td></tr>
+        <tr><td><code style="font-size:11px;color:var(--teal)">SignedContractExtractor</code></td><td>Draw Down Agent — extracts data from signed loan contracts</td><td style="color:var(--muted)">Custom</td></tr>
+        <tr><td><code style="font-size:11px;color:var(--green)">Payslip_Extraction_prompt</code></td><td>Income Verification Agent (in dev) — payslip data extraction</td><td style="color:var(--muted)">Custom</td></tr>
+        <tr><td><code style="font-size:11px;color:var(--green)">Payslip_Eligibility_Validator</code></td><td>Income Verification Agent (in dev) — validates against lending criteria</td><td style="color:var(--muted)">Custom</td></tr>
+        <tr><td><code style="font-size:11px;color:var(--green)">Payslip_Batch_Extractor</code></td><td>Income Verification Agent (in dev) — batch processing variant</td><td style="color:var(--muted)">Custom</td></tr>
+        <tr><td><code style="font-size:11px;color:var(--muted)">Agent_Output_Concatenation_Prompt</code></td><td>Platform template — merges multi-step outputs into final agent response</td><td style="color:var(--muted)">Platform</td></tr>
+        <tr><td><code style="font-size:11px;color:var(--muted)">(unlabelled)</code></td><td>Direct API / framework calls without template attribution — common in sandbox testing</td><td style="color:var(--muted)">—</td></tr>
       </tbody>
     </table>
   </div>
@@ -1152,43 +1205,45 @@ new Chart(document.getElementById('erTrendChart'), {
   }
 });
 
-// ── ER by Org doughnut (Tab 2) ─────────────────────
+// ── Credit consumption by org doughnut (Tab 2) ────
 new Chart(document.getElementById('erByOrgChart'), {
   type: 'doughnut',
   data: {
-    labels: ['LMoney Production', 'Sandbox C (Draw Down dev)', 'Sandbox B (CCT testing)', 'Sandbox D'],
+    labels: ['Sandbox C (Draw Down dev)', 'LMoney Production', 'Sandbox B (CCT testing)', 'Sandbox A (DC Companion)', 'Sandbox E'],
     datasets: [{
-      data: [233192, 244658, 180164, 70],
-      backgroundColor: ['rgba(248,113,113,0.8)', 'rgba(251,191,36,0.8)', 'rgba(79,144,247,0.8)', 'rgba(107,122,153,0.5)'],
-      borderColor: ['#f87171','#fbbf24','#4f90f7','#6b7a99'],
+      data: [68.9, 17.6, 12.6, 0.6, 0.4],
+      backgroundColor: ['rgba(251,191,36,0.85)', 'rgba(248,113,113,0.85)', 'rgba(79,144,247,0.85)', 'rgba(52,211,153,0.7)', 'rgba(107,122,153,0.5)'],
+      borderColor: ['#fbbf24','#f87171','#4f90f7','#34d399','#6b7a99'],
       borderWidth: 2, hoverOffset: 8
     }]
   },
   options: {
-    responsive: true, maintainAspectRatio: false, cutout: '65%',
+    responsive: true, maintainAspectRatio: false, cutout: '62%',
     plugins: {
-      legend: { position: 'bottom', labels: { color: '#6b7a99', boxWidth: 10, padding: 12, font: { size: 11 } } },
-      tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed.toLocaleString()} ERs` } }
+      legend: { position: 'bottom', labels: { color: '#6b7a99', boxWidth: 10, padding: 10, font: { size: 11 } } },
+      tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed}% of total credits` } }
     }
   }
 });
 
-// ── ER by Feature bar (Tab 2) ──────────────────────
+// ── Agent framework split bar (Tab 2) ─────────────
 new Chart(document.getElementById('erByFeatureChart'), {
   type: 'bar',
   data: {
-    labels: ['EmployeeAssistant', 'PromptTemplate\nInvocable', '(Unlabelled)', 'Other'],
+    labels: ['LMoney Prod', 'Sandbox C', 'Sandbox B', 'Sandbox A'],
     datasets: [
-      { label: 'Production', data: [163870, 68592, 0, 730], backgroundColor: 'rgba(248,113,113,0.75)', borderRadius: 5 },
-      { label: 'Sandbox', data: [295506, 38290, 90980, 116], backgroundColor: 'rgba(251,191,36,0.55)', borderRadius: 5 }
+      { label: 'Legacy ReAct (AiCopilot)',     data: [100, 19, 100, 5],  backgroundColor: 'rgba(248,113,113,0.7)', borderRadius: 4 },
+      { label: 'Agentforce 2.0 (Atlas)',        data: [0,   23,  0,  55], backgroundColor: 'rgba(167,139,250,0.75)', borderRadius: 4 },
+      { label: 'Custom templates',              data: [32,   3,  15,  5], backgroundColor: 'rgba(34,211,238,0.6)', borderRadius: 4 },
+      { label: 'Unlabelled / direct calls',     data: [26,  68,  43, 30], backgroundColor: 'rgba(107,122,153,0.4)', borderRadius: 4 }
     ]
   },
   options: {
-    responsive: true, maintainAspectRatio: false, indexAxis: 'y',
-    plugins: { legend: { labels: { color: '#6b7a99', boxWidth: 10, padding: 14 } } },
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { labels: { color: '#6b7a99', boxWidth: 10, padding: 10, font: { size: 11 } } } },
     scales: {
-      x: { stacked: true, grid: { color: gridColor }, ticks: { color: '#6b7a99', callback: v => v >= 1000 ? (v/1000).toFixed(0)+'K' : v } },
-      y: { stacked: true, grid: { color: gridColor }, ticks: { color: '#6b7a99' } }
+      x: { stacked: true, grid: { color: gridColor }, ticks: { color: '#6b7a99' } },
+      y: { stacked: true, max: 100, grid: { color: gridColor }, ticks: { color: '#6b7a99', callback: v => v + '%' } }
     }
   }
 });
