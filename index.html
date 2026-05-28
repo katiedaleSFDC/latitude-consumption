@@ -706,7 +706,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
             <div class="feature-num" style="color:var(--muted)">2.1%</div>
           </div>
           <div class="feature-row">
-            <div class="feature-name">(unlabelled direct calls)<small>Direct framework/API calls without template attribution  -  normal in ReAct orchestration for internal reasoning steps</small></div>
+            <div class="feature-name">Platform framework calls (AiCopilot__* features)<small>Attributed via feature_developer_name  -  ReAct orchestration steps (reasoning, planning, tool selection) that use platform-managed prompts rather than custom templates</small></div>
             <div class="feature-bar-wrap"><div class="feature-bar" style="width:63%;background:var(--muted);opacity:0.4"></div></div>
             <div class="feature-num" style="color:var(--muted)">26.1%</div>
           </div>
@@ -771,7 +771,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
             <div class="feature-num" style="color:var(--muted)">1.4%</div>
           </div>
           <div class="feature-row">
-            <div class="feature-name">(unlabelled direct calls)<small>68% of this sandbox's consumption has no template attribution  -  heavy use of direct framework calls is normal in early-stage agent development and testing</small></div>
+            <div class="feature-name">Platform framework calls (Atlas__* features)<small>Attributed via feature_developer_name  -  Agentforce 2.0 Atlas orchestration steps including reasoning, structured output, and planning loops</small></div>
             <div class="feature-bar-wrap"><div class="feature-bar" style="width:100%;background:var(--muted);opacity:0.3"></div></div>
             <div class="feature-num" style="color:var(--muted)">68.3%</div>
           </div>
@@ -825,7 +825,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
             <div class="feature-num" style="color:var(--muted)">9.5%</div>
           </div>
           <div class="feature-row">
-            <div class="feature-name">(unlabelled direct calls)<small>Direct framework calls without template attribution  -  42.7% suggests heavy raw testing between CCT iterations</small></div>
+            <div class="feature-name">Platform framework calls (AiCopilot__* features)<small>Attributed via feature_developer_name  -  ReAct orchestration steps running alongside CCT template testing in this sandbox</small></div>
             <div class="feature-bar-wrap"><div class="feature-bar" style="width:100%;background:var(--muted);opacity:0.35"></div></div>
             <div class="feature-num" style="color:var(--muted)">42.7%</div>
           </div>
@@ -918,7 +918,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
         <tr><td><code style="font-size:11px;color:var(--green)">Payslip_Eligibility_Validator</code></td><td>Income Verification Agent (in dev)  -  validates against lending criteria</td><td style="color:var(--muted)">Custom</td></tr>
         <tr><td><code style="font-size:11px;color:var(--green)">Payslip_Batch_Extractor</code></td><td>Income Verification Agent (in dev)  -  batch processing variant</td><td style="color:var(--muted)">Custom</td></tr>
         <tr><td><code style="font-size:11px;color:var(--muted)">Agent_Output_Concatenation_Prompt</code></td><td>Platform template  -  merges multi-step outputs into final agent response</td><td style="color:var(--muted)">Platform</td></tr>
-        <tr><td><code style="font-size:11px;color:var(--muted)">(unlabelled)</code></td><td>Direct API / framework calls without template attribution  -  common in sandbox testing</td><td style="color:var(--muted)"> - </td></tr>
+        <tr><td><code style="font-size:11px;color:var(--muted)">AiCopilot__* / Atlas__*</code></td><td>Platform framework calls attributed via feature_developer_name  -  orchestration steps managed by the ReAct or Atlas runtime</td><td style="color:var(--muted)">Platform</td></tr>
       </tbody>
     </table>
   </div>
@@ -1340,7 +1340,7 @@ new Chart(document.getElementById('erByFeatureChart'), {
       { label: 'Legacy ReAct (AiCopilot)',     data: [100, 19, 100, 5],  backgroundColor: '#DC2626', borderRadius: 4 },
       { label: 'Agentforce 2.0 (Atlas)',        data: [0,   23,  0,  55], backgroundColor: '#6D28D9', borderRadius: 4 },
       { label: 'Custom templates',              data: [32,   3,  15,  5], backgroundColor: '#0156F5', borderRadius: 4 },
-      { label: 'Unlabelled / direct calls',     data: [26,  68,  43, 30], backgroundColor: '#9CA3AF', borderRadius: 4 }
+      { label: 'Platform framework calls',       data: [26,  68,  43, 30], backgroundColor: '#9CA3AF', borderRadius: 4 }
     ]
   },
   options: {
