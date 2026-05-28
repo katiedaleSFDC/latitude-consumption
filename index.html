@@ -379,12 +379,20 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
 .hero h1 em { font-style:normal; color:var(--pink-light); }
 .hero-sub { font-size:15px; color:rgba(255,255,255,.7); max-width:560px; line-height:1.6; margin-bottom:32px; }
 .hero-okr-bar { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; max-width:900px; }
-.okr-chip { background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:var(--r); padding:12px 14px; }
-.oc-label { font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:rgba(255,255,255,.6); margin-bottom:5px; }
+.okr-chip { background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:var(--r); padding:12px 14px; display:flex; flex-direction:column; }
+.okr-chip.chip-red   { background:rgba(220,38,38,.25);  border-color:rgba(255,120,120,.4); }
+.okr-chip.chip-amber { background:rgba(217,119,6,.2);   border-color:rgba(251,191,36,.4); }
+.okr-chip.chip-green { background:rgba(22,163,74,.2);   border-color:rgba(52,211,153,.4); }
+.okr-chip.chip-blue  { background:rgba(0,106,255,.2);   border-color:rgba(100,170,255,.4); }
+.oc-label { font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:rgba(255,255,255,.65); margin-bottom:5px; }
 .oc-val { font-size:20px; font-weight:700; color:#fff; line-height:1; }
-.oc-target { font-size:11px; color:rgba(255,255,255,.5); margin-top:2px; }
-.oc-bar-wrap { background:rgba(255,255,255,.15); border-radius:20px; height:4px; margin-top:8px; overflow:hidden; }
-.oc-bar-fill { height:100%; border-radius:20px; background:linear-gradient(90deg,var(--pink-light),#fff); }
+.oc-target { font-size:11px; color:rgba(255,255,255,.55); margin-top:2px; flex:1; }
+.oc-bar-wrap { background:rgba(255,255,255,.15); border-radius:20px; height:4px; margin-top:10px; overflow:hidden; flex-shrink:0; }
+.oc-bar-fill { height:100%; border-radius:20px; }
+.chip-red   .oc-bar-fill { background:linear-gradient(90deg,#f87171,#fca5a5); }
+.chip-amber .oc-bar-fill { background:linear-gradient(90deg,#fbbf24,#fde68a); }
+.chip-green .oc-bar-fill { background:linear-gradient(90deg,#34d399,#6ee7b7); }
+.chip-blue  .oc-bar-fill { background:linear-gradient(90deg,#60a5fa,#bfdbfe); }
 
 @media (max-width: 960px) {
   .kpi-grid, .g4 { grid-template-columns: 1fr 1fr; }
@@ -431,11 +439,11 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
     <h1>Agentforce  -  <em>Consumption Intelligence</em></h1>
     <p class="hero-sub">Real consumption data across all orgs. Track ER runway, Flex Credits, and the full agent roadmap in one place.</p>
     <div class="hero-okr-bar">
-      <div class="okr-chip"><div class="oc-label">ERs Remaining</div><div class="oc-val" style="color:var(--pink-light)">919K</div><div class="oc-target">of 1.7M allowance</div><div class="oc-bar-wrap"><div class="oc-bar-fill" style="width:54%"></div></div></div>
-      <div class="okr-chip"><div class="oc-label">Days to ER Exhaustion</div><div class="oc-val" style="color:var(--pink-light)">~32</div><div class="oc-target">~29 June 2026</div><div class="oc-bar-wrap"><div class="oc-bar-fill" style="width:12%"></div></div></div>
-      <div class="okr-chip"><div class="oc-label">Flex Remaining</div><div class="oc-val">21.1M</div><div class="oc-target">0.1% consumed</div><div class="oc-bar-wrap"><div class="oc-bar-fill" style="width:99%"></div></div></div>
-      <div class="okr-chip"><div class="oc-label">Agents in Production</div><div class="oc-val">2</div><div class="oc-target">of 5 planned</div><div class="oc-bar-wrap"><div class="oc-bar-fill" style="width:40%"></div></div></div>
-      <div class="okr-chip"><div class="oc-label">Daily ER Burn</div><div class="oc-val" style="color:var(--pink-light)">~29K</div><div class="oc-target">prod + sandbox</div><div class="oc-bar-wrap"><div class="oc-bar-fill" style="width:60%"></div></div></div>
+      <div class="okr-chip chip-red"><div class="oc-label">ERs Remaining</div><div class="oc-val">919K</div><div class="oc-target">of 1.7M allowance</div><div class="oc-bar-wrap"><div class="oc-bar-fill" style="width:54%"></div></div></div>
+      <div class="okr-chip chip-red"><div class="oc-label">Days to ER Exhaustion</div><div class="oc-val">~32</div><div class="oc-target">~29 June 2026</div><div class="oc-bar-wrap"><div class="oc-bar-fill" style="width:12%"></div></div></div>
+      <div class="okr-chip chip-green"><div class="oc-label">Flex Remaining</div><div class="oc-val">21.1M</div><div class="oc-target">0.1% consumed</div><div class="oc-bar-wrap"><div class="oc-bar-fill" style="width:99%"></div></div></div>
+      <div class="okr-chip chip-blue"><div class="oc-label">Agents in Production</div><div class="oc-val">2</div><div class="oc-target">of 5 planned</div><div class="oc-bar-wrap"><div class="oc-bar-fill" style="width:40%"></div></div></div>
+      <div class="okr-chip chip-amber"><div class="oc-label">Daily ER Burn</div><div class="oc-val">~29K</div><div class="oc-target">prod + sandbox</div><div class="oc-bar-wrap"><div class="oc-bar-fill" style="width:60%"></div></div></div>
     </div>
   </div>
 </div>
