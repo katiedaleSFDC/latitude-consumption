@@ -11,21 +11,21 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
 :root {
-  --bg:        #F4F6F9;
+  --bg:        #F0F4FA;
   --surface:   #fff;
   --card:      #fff;
-  --card2:     #F8F9FA;
+  --card2:     #F5F8FF;
   --border:    #DEE2E6;
-  --border2:   #C3E5FF;
+  --border2:   #CEE6FF;
   --text:      #0B2374;
-  --body:      #212529;
-  --muted:     #6C757D;
-  --blue:      #006AFF;
-  --blue-dark: #004A95;
+  --body:      #42484D;
+  --muted:     #6C7689;
+  --blue:      #0156F5;
+  --blue-dark: #0B2374;
   --blue-darker:#00366C;
-  --blue-light:#EFF8FF;
-  --blue-mid:  #C3E5FF;
-  --blue-glow: rgba(0,106,255,0.10);
+  --blue-light:#EFF7FF;
+  --blue-mid:  #CEE6FF;
+  --blue-glow: rgba(1,86,245,0.10);
   --green:     #16A34A;
   --green-light:#DCFCE7;
   --green-glow:rgba(22,163,74,0.10);
@@ -37,9 +37,9 @@
   --red-glow:  rgba(220,38,38,0.10);
   --purple:    #6D28D9;
   --purple-light:#EDE9FE;
-  --teal:      #0E7490;
-  --pink:      #C31B6C;
-  --pink-light:#FF94CA;
+  --teal:      #0180B2;
+  --pink:      #E9013B;
+  --pink-light:#57C5F7;
   --shadow:    0 1px 4px rgba(0,0,0,0.08);
   --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
   --r:         10px;
@@ -362,7 +362,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
 
 /* ── HERO ── */
 .hero {
-  background: linear-gradient(135deg, #00366C 0%, #004A95 50%, #006AFF 100%);
+  background: linear-gradient(135deg, #00366C 0%, #0B2374 50%, #0156F5 100%);
   padding: 44px 40px 36px; overflow: hidden; position: relative;
 }
 .hero::before {
@@ -1317,7 +1317,7 @@ new Chart(document.getElementById('erByOrgChart'), {
     labels: ['Sandbox C (Draw Down dev)', 'LMoney Production', 'Sandbox B (CCT testing)', 'Sandbox A (DC Companion)', 'Sandbox E'],
     datasets: [{
       data: [68.9, 17.6, 12.6, 0.6, 0.4],
-      backgroundColor: ['#D97706', '#DC2626', '#006AFF', '#16A34A', '#9CA3AF'],
+      backgroundColor: ['#D97706', '#DC2626', '#0156F5', '#16A34A', '#9CA3AF'],
       borderColor: ['#fff','#fff','#fff','#fff','#fff'],
       borderWidth: 2, hoverOffset: 8
     }]
@@ -1339,7 +1339,7 @@ new Chart(document.getElementById('erByFeatureChart'), {
     datasets: [
       { label: 'Legacy ReAct (AiCopilot)',     data: [100, 19, 100, 5],  backgroundColor: '#DC2626', borderRadius: 4 },
       { label: 'Agentforce 2.0 (Atlas)',        data: [0,   23,  0,  55], backgroundColor: '#6D28D9', borderRadius: 4 },
-      { label: 'Custom templates',              data: [32,   3,  15,  5], backgroundColor: '#006AFF', borderRadius: 4 },
+      { label: 'Custom templates',              data: [32,   3,  15,  5], backgroundColor: '#0156F5', borderRadius: 4 },
       { label: 'Unlabelled / direct calls',     data: [26,  68,  43, 30], backgroundColor: '#9CA3AF', borderRadius: 4 }
     ]
   },
@@ -1429,7 +1429,7 @@ function updateForecast() {
       data: {
         labels: months,
         datasets: [
-          { label: 'Cumulative Flex Used (M)', data: cumData, backgroundColor: '#006AFF', borderRadius: 5 },
+          { label: 'Cumulative Flex Used (M)', data: cumData, backgroundColor: '#0156F5', borderRadius: 5 },
           { label: 'Flex Allowance (21.1M)', data: allowance, type: 'line',
             borderColor: '#16A34A', borderDash: [5,3], borderWidth: 2, pointRadius: 0, fill: false }
         ]
