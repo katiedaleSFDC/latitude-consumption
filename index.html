@@ -1116,8 +1116,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
           <div class="fkpi"><div class="fkpi-label">Daily Flex</div><div class="fkpi-value" id="fc-daily" style="color:var(--teal)">14,000</div></div>
           <div class="fkpi"><div class="fkpi-label">Monthly Flex</div><div class="fkpi-value" id="fc-monthly" style="color:var(--blue)">308K</div></div>
           <div class="fkpi"><div class="fkpi-label">Annual Flex</div><div class="fkpi-value" id="fc-annual" style="color:var(--blue)">3.7M</div></div>
-          <div class="fkpi"><div class="fkpi-label">% of 21M</div><div class="fkpi-value" id="fc-pct" style="color:var(--green)">17.5%</div></div>
-          <div class="fkpi"><div class="fkpi-label">Flex at contract end</div><div class="fkpi-value" id="fc-months" style="color:var(--green)">68</div></div>
+          <div class="fkpi"><div class="fkpi-label">% of 21M allowance</div><div class="fkpi-value" id="fc-pct" style="color:var(--green)">17.5%</div></div>
         </div>
       </div>
 
@@ -1395,10 +1394,8 @@ function updateForecast() {
   document.getElementById('fc-annual').textContent        = fmt(annFlex);
   document.getElementById('fc-pct').textContent           = flexPct + '%';
   document.getElementById('fc-pct').style.color           = colorFor(+flexPct, 50, 80);
-  document.getElementById('fc-months').textContent        = fmt(Math.round(flexRemainingAtExpiry));
-  document.getElementById('fc-months').style.color        = 'var(--green)';
 
-  const dailyERs = (cctVol*2*manual + ddVol + ivVol) * ER_PER_INV + 14000;
+  const dailyERs = (cctVol*2*manual + ddVol + ivVol) * ER_PER_INV;
   const daysLeft = Math.floor(ER_REM / (dailyERs || 1));
   document.getElementById('er-daily-fc').textContent      = fmt(dailyERs);
   document.getElementById('er-days-fc').textContent       = daysLeft;
