@@ -420,7 +420,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
   <div class="tab" onclick="showTab('usage',this)"><span class="tab-icon">🔬</span> AI Usage Breakdown</div>
   <div class="tab" onclick="showTab('pipeline',this)"><span class="tab-icon">🤖</span> Use Case Pipeline</div>
   <div class="tab" onclick="showTab('forecast',this)"><span class="tab-icon">🔮</span> Forecast & What-If</div>
-  <div class="tab" onclick="showTab('questions',this)"><span class="tab-icon">❓</span> Open Questions</div>
+  <div class="tab" onclick="showTab('questions',this)"><span class="tab-icon">❓</span> Next Steps</div>
 </div>
 
 
@@ -447,7 +447,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
     <span class="alert-icon">🚨</span>
     <div class="alert-body">
       <strong>Einstein Requests exhaustion projected ~29 June — 32 days before contract end (31 July)</strong>
-      67% of all ER consumption is coming from sandboxes, not production. An emergency top-up or accelerated Flex transition are the key options to bridge to July.
+      67% of all ER consumption is from development sandboxes. Options to bridge to the July Flex transition: an ER top-up or accelerating the Flex switchover to June.
     </div>
   </div>
 
@@ -576,7 +576,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
         </div>
         <div class="alert alert-amber" style="margin-top:14px;margin-bottom:0">
           <span class="alert-icon">💡</span>
-          <div class="alert-body">An emergency ER top-up or accelerating the Flex transition to June are the fastest paths to protect runway through contract end.</div>
+          <div class="alert-body">An ER top-up or accelerating the Flex transition to June are the key options — both ensure full coverage through to contract end.</div>
         </div>
       </div>
 
@@ -615,24 +615,24 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
     <span class="alert-icon">🔬</span>
     <div class="alert-body">
       <strong>Prompt template data from AI Consumption Forecast (Mar–27 May 2026) — 5 orgs, 4,613 rows</strong>
-      Two significant findings: Sandbox C is using the new Agentforce 2.0 framework (Atlas), and Sandbox A has Income Verification prompts already in development — not "Ideate" as listed.
+      Two key insights: Draw Down is being built on the new Agentforce 2.0 (Atlas) framework, and Income Verification development is already underway in sandbox.
     </div>
   </div>
 
   <!-- Key intelligence callouts -->
   <div class="g2" style="margin-bottom:14px">
     <div class="card" style="border-color:rgba(167,139,250,0.3);background:linear-gradient(135deg,rgba(167,139,250,0.06),var(--card))">
-      <div class="section-label" style="color:var(--purple)">🔍 Finding 1 — Draw Down uses Agentforce 2.0</div>
+      <div class="section-label" style="color:var(--purple)">🔍 Draw Down Agent — Built on Agentforce 2.0</div>
       <div style="font-size:13px;margin-top:6px;line-height:1.7">
-        Sandbox C's dominant prompts are <code style="font-size:11px;color:var(--purple)">Atlas__AgentGraphReasoningPrompt</code> and <code style="font-size:11px;color:var(--purple)">Atlas__StructuredOutputPrompt</code> — the new <strong>Agentforce 2.0 graph-based framework</strong>, not the legacy ReAct loop used by CCT in production.<br><br>
-        This answers George's question: <strong>yes, they are using the new Agent Builder</strong> — but only for Draw Down. CCT in production still runs on the legacy framework. This also explains why Sandbox C burns so many more ERs per invocation than production: the new framework makes more LLM calls per reasoning step.
+        The Draw Down sandbox is running the new <strong>Agentforce 2.0 graph-based framework</strong> — using <code style="font-size:11px;color:var(--purple)">Atlas__AgentGraphReasoningPrompt</code> and <code style="font-size:11px;color:var(--purple)">Atlas__StructuredOutputPrompt</code>. This is the latest Agentforce capability, giving the Draw Down Agent more sophisticated multi-step reasoning than the current CCT setup.<br><br>
+        The Agentforce 2.0 framework makes more LLM calls per reasoning step — which is reflected in the higher ER consumption from the Draw Down sandbox during development.
       </div>
     </div>
     <div class="card" style="border-color:rgba(52,211,153,0.3);background:linear-gradient(135deg,rgba(52,211,153,0.06),var(--card))">
-      <div class="section-label" style="color:var(--green)">🔍 Finding 2 — Income Verification is already in dev</div>
+      <div class="section-label" style="color:var(--green)">🔍 Income Verification — Active Development Underway</div>
       <div style="font-size:13px;margin-top:6px;line-height:1.7">
-        Sandbox A contains active prompt templates: <code style="font-size:11px;color:var(--green)">Payslip_Extraction_prompt</code>, <code style="font-size:11px;color:var(--green)">Payslip_Eligibility_Validator</code>, and <code style="font-size:11px;color:var(--green)">Payslip_Batch_Extractor</code>.<br><br>
-        The use case plan lists Income Verification as <strong>"Ideate"</strong> — but someone is already building it. This is also the DC Companion org, suggesting the team is experimenting with Data Cloud + Agentforce together, which aligns with the Unified Fraud Detection roadmap item too.
+        The Income Verification Agent is already in active development, with prompt templates live in the sandbox: <code style="font-size:11px;color:var(--green)">Payslip_Extraction_prompt</code>, <code style="font-size:11px;color:var(--green)">Payslip_Eligibility_Validator</code>, and <code style="font-size:11px;color:var(--green)">Payslip_Batch_Extractor</code>.<br><br>
+        This org also combines Data Cloud and Agentforce, which aligns with the Unified Fraud Detection roadmap — the team is already experimenting with the integrated stack.
       </div>
     </div>
   </div>
@@ -658,7 +658,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
       <div class="org-header">
         <div>
           <div class="org-name">🟢 LMoney AU — Production</div>
-          <div class="org-id">00D7F000006PYjvUAG · CCT Agent (ID Verification + Application Verification) · Legacy ReAct framework</div>
+          <div class="org-id">Production · CCT Agent (ID Verification + Application Verification) · Agentforce ReAct</div>
         </div>
         <div class="org-total">
           <div class="org-total-num" style="color:var(--red)">233,192 <span style="font-size:14px;color:var(--muted)">ER</span></div>
@@ -723,7 +723,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
       <div class="org-header">
         <div>
           <div class="org-name">🟡 Sandbox C — Draw Down Agent (Dev)</div>
-          <div class="org-id">00D9r000001Jj2TEAS · <span style="color:var(--purple)">Agentforce 2.0 (Atlas) framework</span> · <span style="color:var(--red)">⚠ Primary driver of ER crisis</span></div>
+          <div class="org-id">Development Sandbox · <span style="color:var(--purple)">Agentforce 2.0 (Atlas) framework</span></div>
         </div>
         <div class="org-total">
           <div class="org-total-num" style="color:var(--amber)">244,658 <span style="font-size:14px;color:var(--muted)">ER</span></div>
@@ -782,7 +782,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
       <div class="org-header">
         <div>
           <div class="org-name">🔵 Sandbox B — CCT Testing</div>
-          <div class="org-id">00D9r000006zngHEAQ · CCT Agent (ID Verification + Application Verification) · Legacy ReAct framework</div>
+          <div class="org-id">Test Sandbox · CCT Agent (ID Verification + Application Verification) · Agentforce ReAct</div>
         </div>
         <div class="org-total">
           <div class="org-total-num" style="color:var(--blue)">180,164 <span style="font-size:14px;color:var(--muted)">ER</span></div>
@@ -842,7 +842,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
       <div class="org-header">
         <div>
           <div class="org-name">⚪ Sandbox A — DC Companion / Income Verification (Dev)</div>
-          <div class="org-id">00D750000000MmCEAU · <span style="color:var(--purple)">Agentforce 2.0 (Atlas) framework</span> · <span style="color:var(--green)">Income Verification already in active dev — plan says "Ideate"</span></div>
+          <div class="org-id">Development Sandbox · <span style="color:var(--purple)">Agentforce 2.0 (Atlas) framework</span> · Data Cloud + Agentforce</div>
         </div>
         <div class="org-total">
           <div class="org-total-num" style="color:var(--green)">Flex only</div>
@@ -970,7 +970,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
     <div class="uc-item testing">
       <div>
         <div class="uc-name">Draw Down Agent</div>
-        <div class="uc-desc">Automates draw down facility requests on loans — currently a fully manual process. Agent executes end-to-end automatically. <span style="color:var(--amber)">Note: sandbox testing of this agent is likely the primary driver of the ER crisis.</span></div>
+        <div class="uc-desc">Automates draw down facility requests on loans — currently a fully manual process. Agent executes end-to-end automatically using Agentforce 2.0 (Atlas) framework.</div>
         <div class="uc-tags">
           <span class="tag tag-amber">⚙ In Testing</span>
           <span class="tag tag-blue">Internal Agent</span>
@@ -1162,68 +1162,55 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
 </div>
 
 
-<!-- ════════════════════ TAB 5: QUESTIONS ════════════════════ -->
+<!-- ════════════════════ TAB 5: NEXT STEPS ════════════════════ -->
 <div id="tab-questions" class="page">
 
-  <div class="alert alert-amber">
-    <span class="alert-icon">⚠️</span>
-    <div class="alert-body"><strong>Open questions to answer in tomorrow's meeting.</strong> Click to check off as you go.</div>
+  <div class="alert alert-blue">
+    <span class="alert-icon">📋</span>
+    <div class="alert-body"><strong>Actions and decisions to progress together.</strong> Click to check off items as they're resolved.</div>
   </div>
 
   <div class="g2">
     <div>
       <div class="q-group">
-        <div class="q-group-title">🚨 Urgent — ER Runway</div>
+        <div class="q-group-title">🚨 ER Runway — Immediate</div>
         <div class="q-item" onclick="toggleCheck(this)">
           <div class="q-check"></div>
           <div class="q-body">
-            <strong>Which sandbox orgs are running Draw Down dev/test?</strong>
-            <span>Sandbox C (00D9r000001Jj2TEAS) has consumed 244,658 ERs — more than production. Need to confirm this is Draw Down dev and who controls it.</span>
-            <span class="q-owner">Ask: Visakh</span>
+            <strong>Agree on bridge plan to July contract end</strong>
+            <span>Options: (a) emergency ER top-up, (b) accelerate Flex transition to June, or (c) a combination. Which approach works best for your team?</span>
           </div>
         </div>
         <div class="q-item" onclick="toggleCheck(this)">
           <div class="q-check"></div>
           <div class="q-body">
-            <strong>Can sandbox testing be paused or rate-limited until July?</strong>
-            <span>This is the single fastest lever. Does the CloudKaptan team need continuous testing, or can it be batched/scheduled to preserve ER runway?</span>
-            <span class="q-owner">Ask: Visakh + CloudKaptan</span>
-          </div>
-        </div>
-        <div class="q-item" onclick="toggleCheck(this)">
-          <div class="q-check"></div>
-          <div class="q-body">
-            <strong>What's the preferred bridge to July? Top-up, pause, or accelerate Flex?</strong>
-            <span>Three options: (a) emergency ER top-up purchase, (b) reduce sandbox activity, (c) move Flex transition to June. Which combination works best?</span>
-            <span class="q-owner">Ask: George + Visakh + Luke</span>
+            <strong>Confirm which environments are running Draw Down development</strong>
+            <span>Development sandbox consumption has exceeded production to date. Confirming the active environments helps us forecast accurately through to go-live.</span>
           </div>
         </div>
       </div>
 
       <div class="q-group">
-        <div class="q-group-title">🤖 Draw Down Agent</div>
+        <div class="q-group-title">🤖 Draw Down Agent — June Go-Live</div>
         <div class="q-item" onclick="toggleCheck(this)">
           <div class="q-check"></div>
           <div class="q-body">
-            <strong>How many Draw Down requests per day at launch?</strong>
-            <span>Primary driver of future Flex. Even a rough estimate (50/day? 200/day?) lets us complete the forecast.</span>
-            <span class="q-owner">Ask: Visakh</span>
+            <strong>Expected daily invocations at launch</strong>
+            <span>Even a rough estimate lets us complete the Flex forecast. How many draw down requests are processed per day today manually?</span>
           </div>
         </div>
         <div class="q-item" onclick="toggleCheck(this)">
           <div class="q-check"></div>
           <div class="q-body">
-            <strong>How many actions per Draw Down invocation?</strong>
-            <span>A draw down likely has multiple steps (validate, check limit, execute, notify). Each action = 20 Flex Credits. Is it 3 actions? 5? More?</span>
-            <span class="q-owner">Ask: Visakh + CloudKaptan</span>
+            <strong>Number of actions per Draw Down invocation</strong>
+            <span>Each action step consumes 20 Flex Credits. A draw down flow likely has multiple steps (validate, check limit, execute, notify) — confirming this completes the cost model.</span>
           </div>
         </div>
         <div class="q-item" onclick="toggleCheck(this)">
           <div class="q-check"></div>
           <div class="q-body">
-            <strong>Launching auto-only, manual-only, or both?</strong>
-            <span>CCT started auto-only before adding manual triggers — which we estimate doubles volume. What's the Draw Down launch mode?</span>
-            <span class="q-owner">Ask: Visakh</span>
+            <strong>Launch mode — automated, manual trigger, or both?</strong>
+            <span>This determines peak Flex consumption. CCT launched automated-only before adding manual triggers — what's the plan for Draw Down?</span>
           </div>
         </div>
       </div>
@@ -1231,65 +1218,44 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
 
     <div>
       <div class="q-group">
-        <div class="q-group-title">💰 ROI & Business Case (Luke's ask)</div>
+        <div class="q-group-title">💰 Value & ROI</div>
         <div class="q-item" onclick="toggleCheck(this)">
           <div class="q-check"></div>
           <div class="q-body">
-            <strong>Current manual processing time per CCT loan assessment?</strong>
-            <span>Needed to calculate time savings. Agent processing: milliseconds. Manual: how many minutes? This drives the cost-per-application comparison.</span>
-            <span class="q-owner">Ask: Luke / operations</span>
+            <strong>Current manual processing time per loan assessment</strong>
+            <span>Agent processing takes milliseconds. Confirming today's manual time per assessment enables a precise cost-per-application comparison for the business case.</span>
           </div>
         </div>
         <div class="q-item" onclick="toggleCheck(this)">
           <div class="q-check"></div>
           <div class="q-body">
-            <strong>FTE cost for the teams being augmented?</strong>
-            <span>DJ has an ROI model — confirm the salary/rate inputs align with the actual numbers, or get Luke to adjust them.</span>
-            <span class="q-owner">Ask: Luke (confirm DJ's assumptions)</span>
-          </div>
-        </div>
-        <div class="q-item" onclick="toggleCheck(this)">
-          <div class="q-check"></div>
-          <div class="q-body">
-            <strong>How many loan applications are processed per month?</strong>
-            <span>Combined with ~40 Flex Credits per assessment, gives a clean monthly consumption and cost-per-application number for the board.</span>
-            <span class="q-owner">Ask: Luke / Visakh</span>
+            <strong>Monthly loan application volumes</strong>
+            <span>Combined with ~40 Flex Credits per assessment, this gives a clean cost-per-application metric — useful for board-level reporting.</span>
           </div>
         </div>
       </div>
 
       <div class="q-group">
-        <div class="q-group-title">🔮 Pipeline & Technical</div>
+        <div class="q-group-title">🔮 Agent Roadmap</div>
         <div class="q-item" onclick="toggleCheck(this)">
           <div class="q-check"></div>
           <div class="q-body">
-            <strong>Timeline for Income Verification Agent?</strong>
-            <span>In Ideate stage. Next steps: AnalyzeID + MuleSoft IDP licensing, then prompt engineering (Weeks 28–30). Is this FY27 or FY28?</span>
-            <span class="q-owner">Ask: Visakh</span>
+            <strong>Income Verification Agent — target timeline</strong>
+            <span>Development is already underway. What's the target go-live timeframe, and are AnalyzeID and MuleSoft IDP licenses in place?</span>
           </div>
         </div>
         <div class="q-item" onclick="toggleCheck(this)">
           <div class="q-check"></div>
           <div class="q-body">
-            <strong>Are they using the new Agentforce Agent Builder?</strong>
-            <span>George flagged this as unknown. Relevant for what's possible with future use cases and whether CCT needs a rebuild.</span>
-            <span class="q-owner">Ask: Visakh + CloudKaptan</span>
+            <strong>Will CCT manual triggers add net-new volume or replace auto-mode?</strong>
+            <span>Manual triggers going live this week — understanding whether these are the same applications (parallel) or additional ones helps us refine the CCT Flex forecast.</span>
           </div>
         </div>
         <div class="q-item" onclick="toggleCheck(this)">
           <div class="q-check"></div>
           <div class="q-body">
-            <strong>Will manual triggers double CCT volume or add incrementally?</strong>
-            <span>Visakh said manual trigger goes live this week. Are these the same applications also running in auto mode, or net-new volume on top?</span>
-            <span class="q-owner">Ask: Visakh</span>
-          </div>
-        </div>
-        <div class="q-item" onclick="toggleCheck(this)">
-          <div class="q-check"></div>
-          <div class="q-body">
-            <strong>Unified Fraud Detection — is this on the FY27 roadmap?</strong>
-            <span>Marked Phase 5. Spans Agentforce + Data Cloud (separate credit pools). Worth a timeline signal even if scoping is a later conversation.</span>
-            <span class="q-owner">Ask: Visakh / Luke</span>
+            <strong>Unified Fraud Detection — FY27 roadmap priority?</strong>
+            <span>This spans Agentforce and Data Cloud (separate credit pools) and will need its own scoping session. Is this on the FY27 roadmap or further out?</span>
           </div>
         </div>
       </div>
