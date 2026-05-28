@@ -388,10 +388,11 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
     </div>
   </div>
 
-  <!-- KPI ROW -->
-  <div class="kpi-grid">
+  <!-- ER KPI ROW -->
+  <div class="section-label">Einstein Requests</div>
+  <div class="kpi-grid" style="margin-bottom:20px">
     <div class="kpi-card accent-red">
-      <div class="kpi-label">Days to ER Exhaustion</div>
+      <div class="kpi-label">Days to Exhaustion</div>
       <div class="kpi-value" style="color:var(--red)">32</div>
       <div class="kpi-sub">~29 June 2026</div>
     </div>
@@ -401,14 +402,39 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
       <div class="kpi-sub">45.9% of 1.7M allowance</div>
     </div>
     <div class="kpi-card accent-blue">
-      <div class="kpi-label">Sandbox ER Burn ⚠</div>
+      <div class="kpi-label">Sandbox Burn ⚠</div>
       <div class="kpi-value" style="color:var(--blue)">525K</div>
       <div class="kpi-sub">67% of all consumption</div>
     </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Production Burn</div>
+      <div class="kpi-value">255K</div>
+      <div class="kpi-sub">33% of consumption</div>
+    </div>
+  </div>
+
+  <!-- FLEX KPI ROW -->
+  <div class="section-label">Flex Credits</div>
+  <div class="kpi-grid" style="margin-bottom:20px">
     <div class="kpi-card accent-green">
-      <div class="kpi-label">Flex Credits Remaining</div>
+      <div class="kpi-label">Status</div>
+      <div class="kpi-value" style="color:var(--green)">Healthy</div>
+      <div class="kpi-sub">5.5+ years at CCT rate</div>
+    </div>
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">Flex Consumed</div>
+      <div class="kpi-value" style="color:var(--green)">21,732</div>
+      <div class="kpi-sub">0.1% of 21.1M allowance</div>
+    </div>
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">CCT Forecast (monthly)</div>
+      <div class="kpi-value" style="color:var(--teal)">320K</div>
+      <div class="kpi-sub">Both agents, business days</div>
+    </div>
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">Flex Remaining</div>
       <div class="kpi-value" style="color:var(--green)">21.1M</div>
-      <div class="kpi-sub">99.9% of 21.1M allowance</div>
+      <div class="kpi-sub">66 months runway</div>
     </div>
   </div>
 
@@ -439,12 +465,19 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
           </div>
         </div>
         <hr>
-        <div class="section-label" style="margin-bottom:8px">Flex Credits</div>
+        <div class="section-label" style="margin-bottom:8px">Flex Credits Consumption</div>
         <div class="runway-bar-wrap" style="margin-top:0">
           <div class="runway-labels"><span>0</span><span style="color:var(--green)">21,732 used (0.1%)</span><span>21,100,000</span></div>
           <div class="segmented-bar">
-            <div class="seg seg-green" style="width:0.15%"></div>
+            <!-- Minimum visible width of 2% so the bar shows -->
+            <div class="seg seg-green" style="width:2%;min-width:6px" title="Production: 16,340"></div>
+            <div class="seg" style="width:0.5%;background:rgba(52,211,153,0.3)" title="Sandbox: 5,392"></div>
             <div class="seg seg-empty"></div>
+          </div>
+          <div class="bar-legend">
+            <div class="bar-legend-item"><div class="bar-legend-dot" style="background:var(--green)"></div>Production (16,340)</div>
+            <div class="bar-legend-item"><div class="bar-legend-dot" style="background:rgba(52,211,153,0.4)"></div>Sandbox (5,392)</div>
+            <div class="bar-legend-item"><div class="bar-legend-dot" style="background:rgba(255,255,255,0.12)"></div>Remaining (21,078,268)</div>
           </div>
         </div>
       </div>
