@@ -714,13 +714,38 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
         <!-- Flex section -->
         <div class="org-section-header">
           <div class="org-section-title" style="color:var(--green)">◆ Flex Credits  -  13,400 total</div>
-          <div class="org-section-total" style="color:var(--green)">~20 credits per action execution</div>
+          <div class="org-section-total" style="color:var(--green)">Flex mirrors ER template split</div>
         </div>
         <div class="org-section-rows">
           <div class="feature-row">
-            <div class="feature-name">GenAiFunctionDefinition (CCT Agent actions)<small>One action per subagent invocation (Application Verification + ID Verification). 350 invocations/day × 2 subagents × 20 = 14,000 Flex/day expected</small></div>
+            <div class="feature-name">AiCopilot__ReactInitialPrompt<small>Platform: ReAct reasoning loop consumes Flex Credits alongside ERs on every invocation</small></div>
             <div class="feature-bar-wrap"><div class="feature-bar" style="width:100%;background:var(--green)"></div></div>
-            <div class="feature-num" style="color:var(--green)">100%</div>
+            <div class="feature-num" style="color:var(--green)">41.3%</div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-name">Platform framework calls (AiCopilot__* features)<small>Attributed via feature_developer_name  -  orchestration steps consuming Flex Credits in parallel with ERs</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:63%;background:var(--green);opacity:0.6"></div></div>
+            <div class="feature-num" style="color:var(--green)">26.1%</div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-name">Document_Identification_Prompt<small>Custom (ID Verification Agent)</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:24.7%;background:var(--green);opacity:0.8"></div></div>
+            <div class="feature-num" style="color:var(--muted)">10.2%</div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-name">Application_Summarization_Prompt<small>Custom (Application Verification Agent)</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:24.7%;background:var(--green);opacity:0.7"></div></div>
+            <div class="feature-num" style="color:var(--muted)">10.2%</div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-name">Agent_Output_Concatenation_Prompt<small>Platform: merges subagent outputs</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:24.5%;background:var(--green);opacity:0.6"></div></div>
+            <div class="feature-num" style="color:var(--muted)">10.1%</div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-name">Data_Extraction_for_ID_Document<small>Custom (ID Verification Agent)</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:5.1%;background:var(--muted);opacity:0.5"></div></div>
+            <div class="feature-num" style="color:var(--muted)">2.1%</div>
           </div>
         </div>
       </div>
@@ -833,13 +858,33 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
         <!-- Flex section -->
         <div class="org-section-header">
           <div class="org-section-title" style="color:var(--green)">◆ Flex Credits  -  4,656 total</div>
-          <div class="org-section-total" style="color:var(--green)">CCT action testing</div>
+          <div class="org-section-total" style="color:var(--green)">Flex mirrors ER template split</div>
         </div>
         <div class="org-section-rows">
           <div class="feature-row">
-            <div class="feature-name">GenAiFunctionDefinition (CCT Agent actions)<small>Sandbox testing of the same actions deployed to production  -  confirms the 1 action/invocation pattern. 4,656 ÷ 20 = ~233 full test invocations across the period</small></div>
-            <div class="feature-bar-wrap"><div class="feature-bar" style="width:100%;background:var(--green)"></div></div>
-            <div class="feature-num" style="color:var(--green)">100%</div>
+            <div class="feature-name">Platform framework calls (AiCopilot__* features)<small>Attributed via feature_developer_name  -  orchestration steps consuming Flex Credits in parallel with ERs</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:100%;background:var(--green);opacity:0.6"></div></div>
+            <div class="feature-num" style="color:var(--green)">42.7%</div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-name">AiCopilot__ReactInitialPrompt<small>Platform: ReAct reasoning loop</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:89.9%;background:var(--green)"></div></div>
+            <div class="feature-num" style="color:var(--green)">38.4%</div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-name">0hf9r000000mg3QAAQ · OAAQ · NAAQ (3 unresolved template IDs)<small>Active in both ER and Flex consumption</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:22.5%;background:var(--blue);opacity:0.4"></div></div>
+            <div class="feature-num" style="color:var(--muted)">9.7%</div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-name">Document_Identification_Prompt<small>Custom (ID Verification Agent)</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:7.3%;background:var(--green);opacity:0.7"></div></div>
+            <div class="feature-num" style="color:var(--muted)">3.1%</div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-name">Application_Summarization_Prompt + Agent_Output_Concatenation_Prompt<small>Custom templates (Application Verification Agent)</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:7%;background:var(--green);opacity:0.5"></div></div>
+            <div class="feature-num" style="color:var(--muted)">6.0%</div>
           </div>
         </div>
       </div>
@@ -871,29 +916,44 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
         </div>
         <div class="org-section-rows">
           <div class="feature-row">
-            <div class="feature-name">Payslip_Extraction_prompt<small style="color:var(--green)">Custom (Income Verification Agent): extracts structured income fields from payslip documents  -  employer, pay period, gross/net amounts, YTD figures</small></div>
+            <div class="feature-name">EmployeeAssistant<small>Platform: agent runtime invocation  -  drives 74.5% of all Flex consumption in this sandbox</small></div>
             <div class="feature-bar-wrap"><div class="feature-bar" style="width:100%;background:var(--green)"></div></div>
-            <div class="feature-num" style="color:var(--green)">~35%</div>
+            <div class="feature-num" style="color:var(--green)">74.5%</div>
           </div>
           <div class="feature-row">
-            <div class="feature-name">Payslip_Eligibility_Validator<small style="color:var(--green)">Custom (Income Verification Agent): validates extracted payslip data against unsecured lending criteria  -  income thresholds, employment stability, document authenticity</small></div>
-            <div class="feature-bar-wrap"><div class="feature-bar" style="width:85.7%;background:var(--green);opacity:0.8"></div></div>
-            <div class="feature-num" style="color:var(--green)">~30%</div>
+            <div class="feature-name">PromptTemplateGenerationsInvocable<small>Platform: prompt template invocation API  -  used when triggering templates programmatically</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:11.1%;background:var(--green);opacity:0.7"></div></div>
+            <div class="feature-num" style="color:var(--muted)">8.3%</div>
           </div>
           <div class="feature-row">
-            <div class="feature-name">Payslip_Batch_Extractor<small style="color:var(--green)">Custom (Income Verification Agent): batch processing variant  -  handles multiple payslips in a single invocation (e.g. 3-month history)</small></div>
-            <div class="feature-bar-wrap"><div class="feature-bar" style="width:57.1%;background:var(--green);opacity:0.6"></div></div>
-            <div class="feature-num" style="color:var(--green)">~20%</div>
+            <div class="feature-name">PromptBuilderPreview<small>Platform: Prompt Builder previews  -  team actively iterating on prompt templates in the builder UI</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:7.4%;background:var(--green);opacity:0.6"></div></div>
+            <div class="feature-num" style="color:var(--muted)">5.5%</div>
           </div>
           <div class="feature-row">
-            <div class="feature-name">Atlas__AgentGraphReasoningPrompt + Atlas__StructuredOutputPrompt<small style="color:var(--purple)">Agentforce 2.0 platform: Income Verification is being built on the new Atlas stack  -  more token-intensive but more capable for multi-document reasoning</small></div>
-            <div class="feature-bar-wrap"><div class="feature-bar" style="width:28.6%;background:var(--purple);opacity:0.6"></div></div>
-            <div class="feature-num" style="color:var(--purple)">~10%</div>
+            <div class="feature-name">Atlas__AgentGraphReasoningPrompt<small style="color:var(--purple)">Agentforce 2.0 platform: graph-based reasoning loop  -  Income Verification is being built on the Atlas stack</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:6.7%;background:var(--purple);opacity:0.7"></div></div>
+            <div class="feature-num" style="color:var(--purple)">5.0%</div>
           </div>
           <div class="feature-row">
-            <div class="feature-name">einstein_gpt__authoringAgent* (Agent Builder tools)<small>Agent Builder UI is being actively used  -  someone on the team is configuring actions, topics, and instructions for Income Verification via the no-code builder</small></div>
-            <div class="feature-bar-wrap"><div class="feature-bar" style="width:14.3%;background:var(--muted);opacity:0.5"></div></div>
-            <div class="feature-num" style="color:var(--muted)">~5%</div>
+            <div class="feature-name">Platform framework calls (Atlas__* features)<small>Attributed via feature_developer_name  -  Atlas orchestration steps</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:5.8%;background:var(--purple);opacity:0.4"></div></div>
+            <div class="feature-num" style="color:var(--purple)">4.3%</div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-name">Atlas__StructuredOutputPrompt<small style="color:var(--purple)">Agentforce 2.0 platform: JSON output extraction</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:1.3%;background:var(--purple);opacity:0.5"></div></div>
+            <div class="feature-num" style="color:var(--purple)">1.0%</div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-name">Payslip_Extraction_prompt / Payslip_Eligibility_Validator / Payslip_Batch_Extractor<small style="color:var(--green)">Custom (Income Verification Agent): active in data but each &lt;0.1%  -  template testing is in early stages</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:0.5%;background:var(--green);opacity:0.5"></div></div>
+            <div class="feature-num" style="color:var(--muted)">&lt;0.1%</div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-name">einstein_gpt__authoringAgent* (Agent Builder tools)<small>Agent Builder UI actively used  -  configuring actions, topics, and instructions for Income Verification</small></div>
+            <div class="feature-bar-wrap"><div class="feature-bar" style="width:0.5%;background:var(--muted);opacity:0.5"></div></div>
+            <div class="feature-num" style="color:var(--muted)">&lt;0.1%</div>
           </div>
         </div>
       </div>
