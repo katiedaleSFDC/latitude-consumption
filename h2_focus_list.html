@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Katie's H2 Consumption Focus List</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; margin: 24px; background: #f9f9f9; color: #111; }
+    h1 { font-size: 20px; margin-bottom: 4px; }
+    .meta { color: #666; font-size: 12px; margin-bottom: 20px; }
+    table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    th { background: #1a1a2e; color: white; padding: 10px 12px; text-align: left; font-size: 12px; white-space: nowrap; }
+    td { padding: 10px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+    tr:hover td { background: #f5f7ff; }
+    .account-name { font-weight: 600; font-size: 14px; }
+    .priority-big-bet { color: #c0392b; font-weight: 600; }
+    .priority-accelerator { color: #e67e22; font-weight: 600; }
+    .priority-upside { color: #27ae60; font-weight: 600; }
+    .use-case { font-size: 12px; margin-bottom: 3px; }
+    .use-case-prod { color: #27ae60; }
+    .use-case-testing { color: #2980b9; }
+    .use-case-dev { color: #2980b9; }
+    .use-case-scoping { color: #8e44ad; }
+    .use-case-ideate { color: #95a5a6; }
+    .team-row { font-size: 12px; margin-bottom: 2px; }
+    .blocker { color: #c0392b; font-size: 12px; }
+    .activity { font-size: 12px; margin-bottom: 2px; color: #444; }
+    .plan-link { font-size: 11px; color: #3498db; text-decoration: none; }
+    .plan-link:hover { text-decoration: underline; }
+    .hours { font-weight: 600; font-size: 13px; }
+    .no-activities { color: #aaa; font-style: italic; font-size: 12px; }
+    .q2-star { color: #f39c12; }
+    ul.steps { margin: 0; padding-left: 16px; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h1>🎯 Katie's H2 Consumption Focus List</h1>
+  <div class="meta">Generated: 29 May 2026 &nbsp;|&nbsp; Total Accounts: 23 &nbsp;|&nbsp; Sources: org62 · Consumption Plans · JAPAC Forecast Sheet · Activity Data</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Account</th>
+        <th>Team</th>
+        <th>CCR YTD<br>(AF / D360)</th>
+        <th>H1 Forecast<br>(AF / D360)</th>
+        <th>⭐ Q2 Use Cases</th>
+        <th>Next Steps</th>
+        <th>Latest Activities</th>
+        <th>Blockers</th>
+        <th>FY27h</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- 1. TELSTRA — Big Bet, highest 30d hours (combined orgs) -->
+      <tr>
+        <td>
+          <div class="account-name">🟢 Telstra</div>
+          <div class="priority-big-bet">Big Bet</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1m63ctL53rN4DWKBuUleQtZQ9WlG_wBw6D0nXpMybWVs/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Giovanni Arcuri</div>
+          <div class="team-row"><b>AF AE:</b> Antony Krilis</div>
+          <div class="team-row"><b>D360 AE:</b> Nick Hultink</div>
+          <div class="team-row"><b>CSM:</b> Eithne Kane / Jessica Wraith (Suncorp)</div>
+          <div class="team-row"><b>Partner:</b> Salesforce FDE (B2C/B2B), Accenture</div>
+        </td>
+        <td>$1,826 / $791</td>
+        <td>$4,835 / $2,094</td>
+        <td>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Interim Refund Agent (B2C) <small>· actual go-live 14-May-2026</small></div>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Security Agent (B2C) <small>· actual go-live 5-May-2026</small></div>
+          <div class="use-case"><span class="use-case-dev">Dev</span> · Billing &amp; Payments Agent (B2C) <small>· est Q2 FY27</small></div>
+          <div class="use-case"><span class="use-case-testing">Testing</span> · Sales Coach (B2B)</div>
+          <div class="use-case"><span class="q2-star">⭐</span> <span class="use-case-scoping">Scoping</span> · D360 B2C &amp; B2B Matching <small>· est TBC (pre-design)</small></div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Consumption estimation for new Data 360 B2C &amp; B2B Matching use case</li>
+            <li>FDE squad extension for Billing &amp; Payments Agent</li>
+            <li>End-to-end MarTech assessment for B2C/B2B before proceeding with migration</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• Telstra - Marketing Assessment (14-May)</div>
+          <div class="activity">• Telstra DC and AI (INTERNAL CONNECT) (13-May)</div>
+          <div class="activity">• AgentForce Team Model (13-May)</div>
+        </td>
+        <td>
+          <div class="blocker">⚠️ D360 sandboxes not available in cloned environment (blocks complex use case dev)</div>
+          <div class="blocker">⚠️ Consumption Cards not showing (B2B Sales Coach)</div>
+          <div class="blocker">⚠️ MarTech assessment required before B2C campaign migration</div>
+          <div class="blocker">⚠️ OOTB SDR Agent: EAC/Einstein services not available in AUS region</div>
+        </td>
+        <td class="hours">~825h</td>
+      </tr>
+
+      <!-- 2. MEDIBANK — Upside, 55.5h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 Medibank</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1NrEacBliT_-OaltuGbvrI5rtsivufVMDc4MEXHHzdZI/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Emaad Ahmed</div>
+          <div class="team-row"><b>AF AE:</b> Michael Lally</div>
+          <div class="team-row"><b>D360 AE:</b> Ian Lu</div>
+          <div class="team-row"><b>CSM:</b> —</div>
+          <div class="team-row"><b>Partner:</b> Merkle</div>
+        </td>
+        <td>$0 / $25,117</td>
+        <td>$0 / $44,325</td>
+        <td>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Employee Support Agent <small>· actual Jan 2025</small></div>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Unified Customer View &amp; Personalization <small>· actual Jan 2025</small></div>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · sGTM: Online/Offline Stitching <small>· actual Dec 2025</small></div>
+          <div class="use-case"><span class="use-case-ideate">Ideate</span> · Financial Products Integration</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Digital SE to intro to Merkle partner working on D360 re-implementation — determine scope &amp; timelines</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• Medibank mtg prep (17-Apr)</div>
+          <div class="activity">• Medibank - D360 Debrief (17-Apr)</div>
+        </td>
+        <td>
+          <div class="blocker">⚠️ Core AE and Digital AE advised no more D360 development in this org — D360 will be rebuilt in a new org</div>
+        </td>
+        <td class="hours">109.8h</td>
+      </tr>
+
+      <!-- 3. ANZ Bank — Upside, 37.2h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟢 ANZ Bank</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1pjuwiBtfvaePwolVnFmhufvEOd3YQSvXyXJuva5CC-k/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Julian Lombardo</div>
+          <div class="team-row"><b>AF AE:</b> Michael Lally</div>
+          <div class="team-row"><b>D360 AE:</b> Ian Lu</div>
+          <div class="team-row"><b>CSM:</b> Brendan Griffin</div>
+          <div class="team-row"><b>Partner:</b> SF Professional Services</div>
+        </td>
+        <td>$0 / $0</td>
+        <td>$0 / $100</td>
+        <td>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Client Summaries <small>· actual Jan 2025</small></div>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Task/Opportunity Creation <small>· actual Feb 2026</small></div>
+          <div class="use-case"><span class="use-case-testing">Testing</span> · Account Snapshots <span class="q2-star">⭐</span> <small>· est 27-May-2026</small></div>
+          <div class="use-case"><span class="use-case-testing">Testing</span> · CAP Diary Comments <span class="q2-star">⭐</span> <small>· est 27-May-2026</small></div>
+          <div class="use-case"><span class="use-case-testing">Testing</span> · BQ Insights <span class="q2-star">⭐</span> <small>· est 27-May-2026</small></div>
+          <div class="use-case"><span class="use-case-testing">Testing</span> · Historical CAZ <span class="q2-star">⭐</span> <small>· est 27-May-2026</small></div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>CSM leading multiple discussions to progress Agentforce use cases with customer</li>
+            <li>Building out benefits proposal for Next Best Action (Ideate)</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• ANZ Bank Consumption Re-Group (20-May)</div>
+          <div class="activity">• Kickoff ANZ Channel Strategy workstream - Enablement &amp; Pilot (14-Apr)</div>
+          <div class="activity">• ANZ Data Cloud / Zero Copy design review (08-Apr)</div>
+        </td>
+        <td>—</td>
+        <td class="hours">322.9h</td>
+      </tr>
+
+      <!-- 4. MACQUARIE BANK — Accelerator, 21.8h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 Macquarie Bank</div>
+          <div class="priority-accelerator">Accelerator</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/17mlQ93gXM1ziJhGSGeIbfZTI3u_8VLzmpz5vPR3Dopw/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Lee Gunns</div>
+          <div class="team-row"><b>AF AE:</b> Michael Lally</div>
+          <div class="team-row"><b>D360 AE:</b> Ian Lu</div>
+          <div class="team-row"><b>CSM:</b> Dawn Goh</div>
+          <div class="team-row"><b>Partner:</b> None (internal resources)</div>
+        </td>
+        <td>$0 / $0</td>
+        <td>$100 / $0</td>
+        <td>
+          <div class="use-case"><span class="use-case-dev">Dev</span> · Call Summarization (Private Wealth)</div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · Sales Triggers (Slack/GCP) <small>· Private Connect Pilot July</small></div>
+          <div class="use-case"><span class="use-case-dev">Dev</span> · D360 Knowledge RAG Foundation</div>
+          <div class="use-case"><span class="use-case-ideate">Ideate</span> · Complaints Service Agent (Phase 2)</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Customer due to move from Einstein to Flex end of May — confirm if additional A4S licenses cover unmetered use cases</li>
+            <li>Explore E4S → A4S swap for Complaints Service Agent; Product feasibility review targeted Winter '26</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• Macq consumption reporting question response to Prateek (06-May)</div>
+          <div class="activity">• Macq Prateek draft response for Observability consumption Qs (05-May)</div>
+          <div class="activity">• Macquarie customer response re: AF observability consumption &amp; dash (04-May)</div>
+        </td>
+        <td>
+          <div class="blocker">⚠️ Grounded Replies (E4S) producing low-quality results; Unified Knowledge structural limitations with AEM knowledge base</div>
+          <div class="blocker">⚠️ Private Connect for GCP BigQuery not available until Mid-FY27</div>
+          <div class="blocker">⚠️ Macquarie security blocks SF robot for website mapping</div>
+        </td>
+        <td class="hours">77.4h</td>
+      </tr>
+
+      <!-- 5. CBA — Accelerator, 17.3h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 Commonwealth Bank</div>
+          <div class="priority-accelerator">Accelerator</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1Zi9XN1HXk8IMgX4X3zgl-eUqyAeG4Z-SSqKkDKL_mEM/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Scott Smyth</div>
+          <div class="team-row"><b>AF AE:</b> Michael Lally</div>
+          <div class="team-row"><b>D360 AE:</b> Ian Lu</div>
+          <div class="team-row"><b>CSM:</b> Holly Stanton</div>
+          <div class="team-row"><b>Partner:</b> —</div>
+        </td>
+        <td>— / —</td>
+        <td>— / —</td>
+        <td>
+          <div class="use-case">No use cases populated — plan in template/TBC state</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Use cases TBC — plan not yet populated beyond template</li>
+            <li>Open opportunity: CBA - IB&M - A1E Upgrade (0063y000019jjjTAAQ)</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• CBA Time Log (04-May)</div>
+          <div class="activity">• Confirmed - HCL @ Foundry (30-Apr)</div>
+          <div class="activity">• CBA Time Log (27-Apr)</div>
+        </td>
+        <td>—</td>
+        <td class="hours">145.6h</td>
+      </tr>
+
+      <!-- 6. PEPPERSTONE — Upside, 13.8h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟢 Pepperstone</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1fQ3ISVT2b2ca7fQHUhsuSUweTjoG8s5lnouMxmQB2wM/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Clint Farmakis</div>
+          <div class="team-row"><b>AF AE:</b> DJORDJE GVOZDENOVIC</div>
+          <div class="team-row"><b>D360 AE:</b> Amaechi Inglis</div>
+          <div class="team-row"><b>CSM:</b> —</div>
+          <div class="team-row"><b>Partner:</b> SF ProServ (initial), internal D360 resources</div>
+        </td>
+        <td>$79 / $14,178</td>
+        <td>$167 / $30,024</td>
+        <td>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · D360 Foundational Build (CFD) <small>· live ~2wks from 25 Apr</small></div>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · CFD Support Agent - AU <small>· live ~4wks from 25 Apr</span></div>
+          <div class="use-case"><span class="use-case-testing">Testing/UAT</span> · Account Summary Agent <span class="q2-star">⭐</span> <small>· end of May</small></div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · CFD Support Agent - 2nd Region</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Follow up call after latest Consumption Plan update to deep dive into consumption estimation</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• Pepperstone Consumption Plan (26-May)</div>
+          <div class="activity">• Pepperstone Consumption Plan Review (25-May)</div>
+          <div class="activity">• Pepperstone Consumption Plan (25-May)</div>
+        </td>
+        <td>—</td>
+        <td class="hours">27.2h</td>
+      </tr>
+
+      <!-- 7. HBF — Accelerator, 8.8h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🔴 HBF</div>
+          <div class="priority-accelerator">Accelerator</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1yQl-0VSAzmUmov60E9uMvdbjLwuFigkC5Wah0XlpJu8/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Simon Smith</div>
+          <div class="team-row"><b>AF AE:</b> DJORDJE GVOZDENOVIC</div>
+          <div class="team-row"><b>D360 AE:</b> Amaechi Inglis</div>
+          <div class="team-row"><b>CSM:</b> Steven Ma</div>
+          <div class="team-row"><b>Partner:</b> Slalom</div>
+        </td>
+        <td>$1,486 / $216</td>
+        <td>$3,932 / $571</td>
+        <td>
+          <div class="use-case"><span class="use-case-dev">Dev</span> · Agent Buddy <small>· est March 2026</small></div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · Webchat Agent (External) <span class="q2-star">⭐</span> <small>· est 31-May-2026 (delayed)</small></div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · Auth Member Agent <span class="q2-star">⭐</span> <small>· post 31-May, at risk</small></div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · Agentforce Marketing</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Continued red account support</li>
+            <li>FDE support from m120 being submitted</li>
+            <li>See: #red-hbf-health-limited-ai-and-data-implementation-2026-04-21</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• HBF DC Consumption (28-May)</div>
+          <div class="activity">• Robert / Jules - HBF Agentforce ADR (26-May)</div>
+          <div class="activity">• HBF Red Account: Internal Checkpoint call (26-May)</div>
+        </td>
+        <td>
+          <div class="blocker">⚠️ Platform Trust Erosion: Planned Updates Breaking Live Builds (Red Account)</div>
+          <div class="blocker">⚠️ Multiple blockers on Webchat &amp; Auth Member Agent — see #red-hbf</div>
+        </td>
+        <td class="hours">14.5h</td>
+      </tr>
+
+      <!-- 8. humm — Upside, 8.2h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 humm</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1Ige2hdkLu37X6Py6kOFgeU2kkBygFh8sm_aJPxXiAgE/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Shauna Wong</div>
+          <div class="team-row"><b>AF AE:</b> DJORDJE GVOZDENOVIC</div>
+          <div class="team-row"><b>D360 AE:</b> Amaechi Inglis</div>
+          <div class="team-row"><b>CSM:</b> Shane Leggett</div>
+          <div class="team-row"><b>Partner:</b> Deloitte (pending ARI)</div>
+        </td>
+        <td>$0 / $0</td>
+        <td>$0 / $0</td>
+        <td>
+          <div class="use-case"><span class="use-case-ideate">Ideate</span> · D360 Foundation</div>
+          <div class="use-case"><span class="use-case-ideate">Ideate</span> · Q2 License Optimization</div>
+          <div class="use-case"><span class="use-case-ideate">Ideate</span> · Campaign Automation</div>
+          <div class="use-case"><span class="use-case-ideate">Ideate</span> · humm Loan Recovery</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Core AE in progress with renewal commercials &amp; ARI pitch to secure buy-in for ProServ D360 implementation</li>
+            <li>ARI approval requires CEO commitment</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• Humm chat with Amaechi on D360 value (25-May)</div>
+          <div class="activity">• Humm Slack msg response on why implement D360 now (21-May)</div>
+          <div class="activity">• Humm Unlocking Data slide (05-May)</div>
+        </td>
+        <td>
+          <div class="blocker">⚠️ ARI approval requires CEO commitment — CIO doesn't feel urgency to implement D360</div>
+        </td>
+        <td class="hours">39.0h</td>
+      </tr>
+
+      <!-- 9. SCA — Upside, 7.8h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 SCA</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1TbdGqat6JvslTP92GIGvboHuTNhqg35vvVeWLxng3c0/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Michael Fortescue</div>
+          <div class="team-row"><b>AF AE:</b> Svetlana Chambers</div>
+          <div class="team-row"><b>D360 AE:</b> Scott Mirabello</div>
+          <div class="team-row"><b>CSM:</b> Stuart Jackson</div>
+          <div class="team-row"><b>Partner:</b> Silverbullet (managed service)</div>
+        </td>
+        <td>$0 / $72,582</td>
+        <td>$0 / $140,895</td>
+        <td>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Adtech Hub &amp; Optimization</div>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Listener Engagement &amp; Personalization</div>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Listener "Playback" 2026</div>
+          <div class="use-case"><span class="use-case-dev">Dev</span> · Predictive Audience Modeling <small>· est Q2 2026</small></div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Customer happy with D360 but wants to change Marketing platforms — delaying new use case development</li>
+            <li>Sales team working on MCA/Personalisation RFP</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• SCA Jess msg response on Slack re: D360 RFP quote (18-May)</div>
+          <div class="activity">• SCA D360 options compare &amp; recommendation for Dig AE (18-May)</div>
+          <div class="activity">• Katie / Jessica: Connect on SCA volumes (18-May)</div>
+        </td>
+        <td>
+          <div class="blocker">⚠️ Customer wants to move off Marketing Cloud due to limited mobile capabilities</div>
+          <div class="blocker">⚠️ 7-month internal delay on BigQuery user-level show aggregation (blocks Predictive Modeling)</div>
+          <div class="blocker">⚠️ D360 Clean Rooms: initial partner (Medibank) pulled out</div>
+        </td>
+        <td class="hours">12.5h</td>
+      </tr>
+
+      <!-- 10. LATITUDE — Accelerator, 5.2h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 Latitude</div>
+          <div class="priority-accelerator">Accelerator</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1J_0De622-ydSOmMvu2DocrPKQzKqlDgnTaftV-TCnZw/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> George OConnor</div>
+          <div class="team-row"><b>AF AE:</b> DJORDJE GVOZDENOVIC</div>
+          <div class="team-row"><b>D360 AE:</b> Amaechi Inglis</div>
+          <div class="team-row"><b>CSM:</b> Krupa Makadia</div>
+          <div class="team-row"><b>Partner:</b> CloudKaptan</div>
+        </td>
+        <td>$0 / $11,442</td>
+        <td>$100 / $20,191</td>
+        <td>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · ID Verification Agent <span class="q2-star">⭐</span> <small>· actual 19-May-2026</small></div>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Application Verification Agent <span class="q2-star">⭐</span> <small>· actual 19-May-2026</small></div>
+          <div class="use-case"><span class="use-case-testing">Testing</span> · Draw Down Agent <small>· est beginning June</small></div>
+          <div class="use-case"><span class="use-case-ideate">Ideate</span> · Income Verification Agent</div>
+          <div class="use-case"><span class="use-case-ideate">Ideate</span> · Unified Fraud Detection</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Flex credits visibility issue resolved &amp; about to max out ERs — customer meeting to review consumption + forecast</li>
+            <li>Digital AE to intro to Marketing technical contact</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• Prep call ahead of Latitude meeting (28-May)</div>
+          <div class="activity">• Latitude ERs Analysis (28-May)</div>
+          <div class="activity">• Latitude AI Consumption Analysis (28-May)</div>
+        </td>
+        <td>
+          <div class="blocker">⚠️ Flex Credits visibility: SKU conversion can't happen until renewal</div>
+          <div class="blocker">⚠️ Digital AE on leave — blocking progress on D360</div>
+        </td>
+        <td class="hours">15.5h</td>
+      </tr>
+
+      <!-- 11. UNIVERSITY OF MELBOURNE — no forecast entry, 4.2h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟢 University of Melbourne</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1sSxLK-RZVdOlxpGAu0t5su3MyZc2PiUKz5CFK84wAEQ/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Michael O'Brien</div>
+          <div class="team-row"><b>AF AE:</b> Simon Gaiger</div>
+          <div class="team-row"><b>D360 AE:</b> Andrea Mainzer</div>
+          <div class="team-row"><b>CSM:</b> Julia Groß</div>
+          <div class="team-row"><b>Partner:</b> None (self-implementing)</div>
+        </td>
+        <td>— / —</td>
+        <td>— / —</td>
+        <td>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Stop 1 Assistant Agent <span class="q2-star">⭐</span> <small>· actual 28-Aug-2024 · 1,000–1,500 queries/wk · 4.6/5 CSAT</small></div>
+          <div class="use-case"><span class="use-case-dev">Dev</span> · One CRM Agent <small>· MVP May 2026</small></div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · Authenticated Student Agent <small>· est H2 2026</small></div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · Oversight Agent <small>· est H2 2026</small></div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>One CRM Agent MVP targeted May 2026; full rollout September 2026</li>
+            <li>Authenticated Student Agent: official rollout H2 2026</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• UoM Consumption Plan Review (27-Mar)</div>
+          <div class="activity">• UoM | Consumption Plan Alignment (23-Mar)</div>
+          <div class="activity">• UoM - Consumption Lead Engagement - Discussion (20-Mar)</div>
+        </td>
+        <td>
+          <div class="blocker">⚠️ Agent 5 (Admissions Agent) — see canvas for blocker details</div>
+        </td>
+        <td class="hours">21.9h</td>
+      </tr>
+
+      <!-- 12. UNISUPER — Upside, 3.2h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 UniSuper</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1f18d0rIGiqpzMQiaARA_0p8wWEsrOUViTKl7R7Fesys/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Julianne Webster</div>
+          <div class="team-row"><b>AF AE:</b> DJORDJE GVOZDENOVIC</div>
+          <div class="team-row"><b>D360 AE:</b> Amaechi Inglis</div>
+          <div class="team-row"><b>CSM:</b> —</div>
+          <div class="team-row"><b>Partner:</b> Infosys</div>
+        </td>
+        <td>— / $0</td>
+        <td>— / $0</td>
+        <td>
+          <div class="use-case"><span class="use-case-ideate">Ideate</span> · Strategic Data Foundation for FSC Go-Live <small>· post June 2026 TBC</small></div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>D360 implementation to be brought forward — but nothing will happen until after FSC go-live June 2026</li>
+            <li>Jesse/Julianne to finalise merge of D360 credits from Employer org into primary FSC Org</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• UniSuper E1 to A1 internal page turn (17-Apr)</div>
+          <div class="activity">• UniSuper Deck Prep for E1 to A1 Session (16-Apr)</div>
+          <div class="activity">• UniSuper Flex migration chat &amp; AF use case discussion on Slack (09-Apr)</div>
+        </td>
+        <td>—</td>
+        <td class="hours">22.8h</td>
+      </tr>
+
+      <!-- 13. SUNCORP — Big Bet, 2.8h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 Suncorp</div>
+          <div class="priority-big-bet">Big Bet</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/19vzB2rcxg-tGZ34x36Fc1sbUPADGbEqrhrdGwEx5dNw/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Irene Zaslavsky</div>
+          <div class="team-row"><b>AF AE:</b> Michael Lally</div>
+          <div class="team-row"><b>D360 AE:</b> Ian Lu</div>
+          <div class="team-row"><b>CSM:</b> Jessica Wraith</div>
+          <div class="team-row"><b>Partner:</b> Ogilvy (BHD)</div>
+        </td>
+        <td>— / $36,633</td>
+        <td>— / $116,363</td>
+        <td>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · D360 for Marketing Phase 1 <small>· March 2026</small></div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · D360 for Marketing Phase 2 <span class="q2-star">⭐</span> <small>· est June 2026 (100 use cases)</small></div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Adhoc support for customer campaign migration go-live in June</li>
+            <li>Customer will revisit consumption discussions after June go-live</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• Placeholder: Salesforce (23-Apr)</div>
+          <div class="activity">• Suncorp (22-Apr)</div>
+          <div class="activity">• Suncorp SIC Prep (20-Apr)</div>
+        </td>
+        <td>—</td>
+        <td class="hours">27.1h</td>
+      </tr>
+
+      <!-- 14. AUSTRALIAN UNITY — Upside, 2.5h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🔴 Australian Unity</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1ete4KG_hN5omH0ZnDem8zHzd8AJ5gjOHp-EWLmsgreg/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> George OConnor</div>
+          <div class="team-row"><b>AF AE:</b> DJORDJE GVOZDENOVIC</div>
+          <div class="team-row"><b>D360 AE:</b> Amaechi Inglis</div>
+          <div class="team-row"><b>CSM:</b> —</div>
+          <div class="team-row"><b>Partner:</b> FDE</div>
+        </td>
+        <td>$0 / $0</td>
+        <td>$0 / $1,000</td>
+        <td>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · Sales Agent (PHI) <small>· 12-week pod starting July 2026</small></div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · Appointment Scheduling Agent (PHI)</div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · 24/7 Member Service Agent (PHI)</div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · Sales &amp; Service Assistive Agent (PHI)</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>FDE in D360 strategy discussions — working towards D360 architecture option paper</li>
+            <li>AF focus shifted to lighthouse use case "Customer Concierge Agent" to drive value through adoption</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• Aus Unity notes review &amp; consumption plan update (21-May)</div>
+          <div class="activity">• Aus Unity consumption plan update (07-May)</div>
+          <div class="activity">• Fieldservice (02-Apr)</div>
+        </td>
+        <td>
+          <div class="blocker">⚠️ Data strategy review — lighthouse AF use case requires long lead time</div>
+          <div class="blocker">⚠️ Precautionary Red Account raised</div>
+        </td>
+        <td class="hours">30.5h</td>
+      </tr>
+
+      <!-- 15. BENDIGO — Upside, 2.0h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 Bendigo</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1is8aZaFmGf0kN0Pr_4tpjiOBFgmXwUbfH-b8mth0pFM/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Mark de Stefanis</div>
+          <div class="team-row"><b>AF AE:</b> Michael Lally</div>
+          <div class="team-row"><b>D360 AE:</b> Ian Lu</div>
+          <div class="team-row"><b>CSM:</b> —</div>
+          <div class="team-row"><b>Partner:</b> carbonx</div>
+        </td>
+        <td>$0 / $14,839</td>
+        <td>$0 / $52,371</td>
+        <td>
+          <div class="use-case"><span class="use-case-testing">Testing</span> · Marketing Campaigns <span class="q2-star">⭐</span> <small>· est May 2026 (68 campaigns in D360)</small></div>
+          <div class="use-case"><span class="use-case-dev">Dev</span> · Web Personalization <small>· est July–Aug 2026</small></div>
+          <div class="use-case"><span class="use-case-dev">Dev</span> · Marketing Intelligence</div>
+          <div class="use-case"><span class="use-case-ideate">Ideate</span> · Advertising Activation</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Continued partner support during marketing implementation with SF product questions &amp; best practices</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• Bendigo Real-Time Exclusions Analysis &amp; Canvas creation (28-May)</div>
+          <div class="activity">• Bendigo research &amp; Slack canvas creation (27-May)</div>
+          <div class="activity">• Bendigo follow up with carbonx on campaign progress (26-May)</div>
+        </td>
+        <td>
+          <div class="blocker">⚠️ Access to customer (slowing progress)</div>
+          <div class="blocker">⚠️ Zero Copy from GDC with Private Connect — workaround with S3 data ingest</div>
+        </td>
+        <td class="hours">11.5h</td>
+      </tr>
+
+      <!-- 16. MACQUARIE UNIVERSITY — Upside, 1.2h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 Macquarie University</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1_lmFHZg5q7gH-k0GY49Sl7P9FK-BdfP165Lj7lRYaKw/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Giordana Rock</div>
+          <div class="team-row"><b>AF AE:</b> Simon Gaiger</div>
+          <div class="team-row"><b>D360 AE:</b> Andrea Mainzer</div>
+          <div class="team-row"><b>CSM:</b> Geeta Chatla</div>
+          <div class="team-row"><b>Partner:</b> KPMG</div>
+        </td>
+        <td>— / —</td>
+        <td>— / —</td>
+        <td>
+          <div class="use-case"><span class="use-case-dev">Dev</span> · D360 1: Unified Student Profile <small>· est Nov 2026</small></div>
+          <div class="use-case"><span class="use-case-dev">Dev</span> · D360 2: Unknown Prospect Personalisation</div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · D360 3: Targeted Advertising</div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · D360 4: AI-Powered Segmentation</div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · D360 5: Journey Activation via MC</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Data Cloud Design Review → MC Design Review → DC &amp; MC implementation → go-live (est Nov 2026)</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• MQU Consumption Estimate (26-May)</div>
+          <div class="activity">• MQU Credit Consumption Review &amp; Questions (25-May)</div>
+          <div class="activity">• MQU Consumption planning (18-May)</div>
+        </td>
+        <td>—</td>
+        <td class="hours">4.8h</td>
+      </tr>
+
+      <!-- 17. ASX — Upside, 1.0h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟢 ASX</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1Nx2qgdcgrjwJbJVcnNUd0PqUAaDW4kBj7dtFTfvlpEw/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Julianne Webster</div>
+          <div class="team-row"><b>AF AE:</b> DJORDJE GVOZDENOVIC</div>
+          <div class="team-row"><b>D360 AE:</b> Amaechi Inglis</div>
+          <div class="team-row"><b>CSM:</b> Shane Leggett</div>
+          <div class="team-row"><b>Partner:</b> —</div>
+        </td>
+        <td>— / —</td>
+        <td>— / —</td>
+        <td>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Employee (Conversational) Agent <span class="q2-star">⭐</span> <small>· Beta, go-live end Apr</small></div>
+          <div class="use-case"><span class="use-case-dev">Dev</span> · A4FSC Knowledge Articles Agent</div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · A4FSC SC Voice &amp; Meeting Summaries</div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · A4FSC MS Teams Integration + NBA</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Art of the possible demo: Knowledge Articles, SC Voice, MS Teams integration — customer wants to build ASAP</li>
+            <li>D360 new lead starts June — enablement onboarding series</li>
+            <li>Tab Next demo on 9th April — identify specific CRM data sources</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• ASX Consumption Plan update (18-May)</div>
+          <div class="activity">• ASX: Coffee meet up with Myles Hannan, Chief Architect (13-Apr)</div>
+          <div class="activity">• ASX Consumption Plan (08-Apr)</div>
+        </td>
+        <td>—</td>
+        <td class="hours">29.1h</td>
+      </tr>
+
+      <!-- 18. CYBERCX — Upside, 0.8h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 CyberCX</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1dzfRKchmObs1AfS6mosK2DLaG3Nj4-AUqcGC6RvUooc/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> William Jones</div>
+          <div class="team-row"><b>AF AE:</b> Svetlana Chambers</div>
+          <div class="team-row"><b>D360 AE:</b> Scott Mirabello</div>
+          <div class="team-row"><b>CSM:</b> Praveen Kumar Inala</div>
+          <div class="team-row"><b>Partner:</b> Cloudwerx (handed over to customer)</div>
+        </td>
+        <td>— / —</td>
+        <td>— / —</td>
+        <td>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Sales and Pipeline Support Agent</div>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Revenue Agent</div>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · D360 Analytics Foundation</div>
+          <div class="use-case"><span class="use-case-ideate">Ideate</span> · Employee Agent</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>No next steps in forecast — not in ANZ tab</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• CyberCX AF discovery session follow-up email (12-May)</div>
+          <div class="activity">• CyberCX - Send workshop agenda &amp; discovery mtg request email (15-Apr)</div>
+          <div class="activity">• CyberCX email draft follow-up (14-Apr)</div>
+        </td>
+        <td>
+          <div class="blocker">⚠️ D360 bug — connector between Microsoft and Salesforce (est. early April — may be resolved)</div>
+        </td>
+        <td class="hours">6.2h</td>
+      </tr>
+
+      <!-- 19. BUPA / DENTAL CORP — Upside, 0.5h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 BUPA / Dental Corp</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1NSF8QwjILGu1FUoSiewoB_k3p_jIz14LPyjDJI2JjQs/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Sam Philp</div>
+          <div class="team-row"><b>AF AE:</b> DJORDJE GVOZDENOVIC</div>
+          <div class="team-row"><b>D360 AE:</b> Amaechi Inglis</div>
+          <div class="team-row"><b>CSM:</b> —</div>
+          <div class="team-row"><b>Partner:</b> —</div>
+        </td>
+        <td>— / —</td>
+        <td>— / —</td>
+        <td>
+          <div class="use-case"><span class="use-case-ideate">Ideate</span> · D360 Foundation</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>No next steps in forecast — not in ANZ tab</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• Bupa Dental Corp Private Connect estimation research &amp; Dig AE msg (21-May)</div>
+        </td>
+        <td>—</td>
+        <td class="hours">1.7h</td>
+      </tr>
+
+      <!-- 20. SEVEN — Upside, 0.5h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 Seven Network</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1KZtjWFmnJGRA6LA5yEhYi3jqIETGpYQOkrt0qJ_9oYs/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Michael Fortescue</div>
+          <div class="team-row"><b>AF AE:</b> Svetlana Chambers</div>
+          <div class="team-row"><b>D360 AE:</b> Scott Mirabello</div>
+          <div class="team-row"><b>CSM:</b> Stuart Jackson</div>
+          <div class="team-row"><b>Partner:</b> SF ProServ, DXC</div>
+        </td>
+        <td>$0 / $0</td>
+        <td>$0 / $100</td>
+        <td>
+          <div class="use-case"><span class="use-case-dev">Dev</span> · D360 Foundation <span class="q2-star">⭐</span> <small>· est 30-Jun-2026 (75M records/day ingestion)</small></div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · D360 Mobile Activation</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Determine D360 implementation timelines and roadmap</li>
+            <li>Confirm go-live readiness with SF ProServ / Stuart Jackson</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• Seven consumption plan (18-May)</div>
+          <div class="activity">• Seven notes update &amp; next steps for enablement session planning (08-Apr)</div>
+          <div class="activity">• Seven Consumption Discussion (01-Apr)</div>
+        </td>
+        <td>—</td>
+        <td class="hours">25.8h</td>
+      </tr>
+
+      <!-- 21. LENDI — Upside, 0.5h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 Lendi Group</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/12abyF7SkOwnb5JQH1TJUdD2gn7NY2WcO1tqEPA-TPsk/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Clint Farmakis</div>
+          <div class="team-row"><b>AF AE:</b> DJORDJE GVOZDENOVIC</div>
+          <div class="team-row"><b>D360 AE:</b> Amaechi Inglis</div>
+          <div class="team-row"><b>CSM:</b> Raheel Khan</div>
+          <div class="team-row"><b>Partner:</b> Lendi Internal + Partner (engaged May 2026)</div>
+        </td>
+        <td>— / —</td>
+        <td>— / —</td>
+        <td>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Phase 1 – D360 Foundation Build <span class="q2-star">⭐</span> <small>· actual 19-May-2026</small></div>
+          <div class="use-case"><span class="use-case-dev">Dev</span> · Phase 2 – Marketing Activations</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>No next steps in forecast — not in ANZ tab</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• Lendi Consumption Plan (20-May)</div>
+        </td>
+        <td>—</td>
+        <td class="hours">10.0h</td>
+      </tr>
+
+      <!-- 22. RACV — Accelerator, 10h 30d (queried via 0013000000M2jWIAAZ) -->
+      <tr>
+        <td>
+          <div class="account-name">🟢 RACV</div>
+          <div class="priority-accelerator">Accelerator</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1SDMbLv6_ObzH1NNi62ejfpIiqQX2nTEHa8Xma1wLz3k/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Nicola Wiggins</div>
+          <div class="team-row"><b>AF AE:</b> DJORDJE GVOZDENOVIC</div>
+          <div class="team-row"><b>D360 AE:</b> Amaechi Inglis</div>
+          <div class="team-row"><b>CSM:</b> Krupa Makadia</div>
+          <div class="team-row"><b>Partner:</b> Accenture (AF), FDE starting 1/6 (D360)</div>
+        </td>
+        <td>$580 / $0</td>
+        <td>$1,228 / $0</td>
+        <td>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Knowledge Agent <span class="q2-star">⭐</span> <small>· actual 14-Apr-2026</small></div>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Account Summary Agent <span class="q2-star">⭐</span> <small>· actual 14-Apr-2026</small></div>
+          <div class="use-case"><span class="use-case-prod">Prod</span> · Call Summary Agent (SCV) <span class="q2-star">⭐</span> <small>· actual 13-May-2026</small></div>
+          <div class="use-case"><span class="use-case-scoping">Scoping</span> · Unified Member Profile (C360)</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Support for RACV team in understanding Agentforce Vibes credit implications</li>
+            <li>FDE pod starting 1/6 to accelerate Agentforce use cases</li>
+            <li>Complete 101 DC consumption session with Tracy (Digital Architect)</li>
+            <li>Explore paid media suppression as quick win activation</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• RACV Email - Additional AF Vibes Resources (25-May)</div>
+          <div class="activity">• RACV Agentforce Vibes analysis (25-May)</div>
+          <div class="activity">• RACV Consumption Sync (21-May)</div>
+        </td>
+        <td>—</td>
+        <td class="hours">48.4h</td>
+      </tr>
+
+      <!-- 23. CROWN — Upside, 0h 30d -->
+      <tr>
+        <td>
+          <div class="account-name">🔴 Crown</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/d/1xXKqETDCoR7jvSn8ZRa1ucZrU3CBfGtr8pnAT1mlnB0/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Angie Kalas</div>
+          <div class="team-row"><b>AF AE:</b> Svetlana Chambers</div>
+          <div class="team-row"><b>D360 AE:</b> Scott Mirabello</div>
+          <div class="team-row"><b>CSM:</b> —</div>
+          <div class="team-row"><b>Partner:</b> Mav3rik (TBC)</div>
+        </td>
+        <td>— / $0</td>
+        <td>— / $0</td>
+        <td>
+          <div class="use-case"><span class="use-case-ideate">Ideate</span> · Unified Guest Profile</div>
+          <div class="use-case">No Q2 go-lives</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>TBC — initial prioritised quick win D360 use cases not yet clear from art of the possible workshop</li>
+            <li>Confirm BigQuery ingestion approach (Zero Copy vs Batch)</li>
+            <li>Lock in Phase 1 scope and confirm implementation partner urgently</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• Crown Consumption Plan (31-Mar)</div>
+        </td>
+        <td>
+          <div class="blocker">⚠️ Implementation partner not yet confirmed — Phase 1 delivery at risk</div>
+          <div class="blocker">⚠️ BigQuery region / Zero Copy connector compatibility not yet confirmed</div>
+          <div class="blocker">⚠️ Identity Resolution: guests use different emails across gaming, hotel &amp; spa</div>
+        </td>
+        <td class="hours">4.7h</td>
+      </tr>
+
+      <!-- ACCOUNTS NOT IN FORECAST: Dept of Education (0 30d hours), ANZ Bank (ANZ Bank entry is 0010M00001SejQ4QAJ with 0 30d) -->
+      <!-- Dept Ed Victoria — Upside, 0h 30d, most recent Apr 2026 -->
+      <tr>
+        <td>
+          <div class="account-name">🔴 Dept of Education Victoria</div>
+          <div class="priority-upside">Upside</div>
+          <a class="plan-link" href="https://docs.google.com/spreadsheets/u/0/d/1JJxIpS3G8REz3OqfWb6juunlditOY1TxTc6d16Kz8yI/edit" target="_blank">📄 Consumption Plan</a>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> Naomi Wilson</div>
+          <div class="team-row"><b>AF AE:</b> Dave Banks / Simon Gaiger</div>
+          <div class="team-row"><b>D360 AE:</b> Andrea Mainzer</div>
+          <div class="team-row"><b>CSM:</b> —</div>
+          <div class="team-row"><b>Partner:</b> —</div>
+        </td>
+        <td>— / —</td>
+        <td>— / —</td>
+        <td>
+          <div class="use-case">No use cases — plan shows BLOCKED BY AE AND LOCATION</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Blocked by AE and location — no next steps</li>
+            <li>Red Account: no Agentforce entitlement</li>
+          </ul>
+        </td>
+        <td>
+          <div class="activity">• FW: VSBA - Grants Management follow up Demo (01-Apr)</div>
+        </td>
+        <td>
+          <div class="blocker">⚠️ Blocked by AE and location — no consumption plan progress</div>
+        </td>
+        <td class="hours">1.5h</td>
+      </tr>
+
+      <!-- Accenture (Challenger) — in ANZ forecast but no plan URL -->
+      <tr>
+        <td>
+          <div class="account-name">🟡 Accenture (Challenger)</div>
+          <div class="priority-upside">Upside</div>
+          <span style="font-size:11px;color:#999;">No plan</span>
+        </td>
+        <td>
+          <div class="team-row"><b>Core AE:</b> —</div>
+          <div class="team-row"><b>AF AE:</b> —</div>
+          <div class="team-row"><b>D360 AE:</b> —</div>
+          <div class="team-row"><b>CSM:</b> —</div>
+          <div class="team-row"><b>Partner:</b> —</div>
+        </td>
+        <td>— / —</td>
+        <td>— / —</td>
+        <td>
+          <div class="use-case">No plan yet</div>
+        </td>
+        <td>
+          <ul class="steps">
+            <li>Planning sessions for Agentforce workshop on 9/6</li>
+            <li>Create Consumption Plan</li>
+          </ul>
+        </td>
+        <td>
+          <div class="no-activities">No qualifying activities on record</div>
+        </td>
+        <td>—</td>
+        <td class="hours">—</td>
+      </tr>
+
+    </tbody>
+  </table>
+</body>
+</html>
