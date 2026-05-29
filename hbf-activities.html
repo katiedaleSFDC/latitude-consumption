@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HBF — Katie Dale Activity Log</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f7fa;
+      color: #1a1a2e;
+      padding: 40px 24px;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    header { margin-bottom: 32px; }
+    header h1 { font-size: 24px; font-weight: 700; color: #032D60; }
+    header p { margin-top: 6px; font-size: 14px; color: #666; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    thead tr { background: #032D60; color: #fff; }
+    thead th {
+      padding: 14px 18px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    thead th.col-date { width: 140px; }
+    thead th.col-dur  { width: 90px; }
+    tbody tr { border-bottom: 1px solid #eef0f3; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: #f0f5ff; }
+    tbody td {
+      padding: 13px 18px;
+      font-size: 14px;
+      line-height: 1.5;
+      vertical-align: top;
+    }
+    td.date { white-space: nowrap; color: #444; font-size: 13px; }
+    td.dur  { white-space: nowrap; color: #666; font-size: 13px; text-align: right; }
+    td.subject { color: #1a1a2e; }
+    td.subject em { color: #555; font-style: italic; }
+    td.subject strong { color: #032D60; }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-left: 8px;
+      vertical-align: middle;
+      font-weight: 600;
+    }
+    .tag-customer { background: #e8f4fd; color: #0070d2; }
+    .tag-internal { background: #f3f3f3; color: #777; }
+    .tag-red      { background: #fde8e8; color: #c23934; }
+    .summary {
+      margin-top: 28px;
+      background: #fff;
+      border-left: 4px solid #032D60;
+      border-radius: 0 8px 8px 0;
+      padding: 18px 22px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #333;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .summary strong { color: #032D60; }
+    footer { margin-top: 24px; font-size: 12px; color: #aaa; text-align: right; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>HBF Health Limited — Katie Dale Activity Log</h1>
+      <p>Activities logged in Salesforce against HBF Health Limited by Katie Dale · Pulled 29 May 2026</p>
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th class="col-date">Date</th>
+          <th>Subject</th>
+          <th class="col-dur">Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="date">26 May 2026</td>
+          <td class="subject">HBF M120 Submission Canvas Creation &amp; Updates<span class="tag tag-internal">Internal</span></td>
+          <td class="dur">30 min</td>
+        </tr>
+        <tr>
+          <td class="date">26 May 2026</td>
+          <td class="subject">HBF Red Account: Internal Checkpoint Call<span class="tag tag-red">Red Account</span></td>
+          <td class="dur">30 min</td>
+        </tr>
+        <tr>
+          <td class="date">26 May 2026</td>
+          <td class="subject">Robert / Jules — HBF Agentforce ADR<span class="tag tag-internal">Internal</span></td>
+          <td class="dur">30 min</td>
+        </tr>
+        <tr>
+          <td class="date">25 May 2026</td>
+          <td class="subject">HBF Slack messages with Keighley<span class="tag tag-internal">Internal</span></td>
+          <td class="dur">20 min</td>
+        </tr>
+        <tr>
+          <td class="date">21 May 2026</td>
+          <td class="subject">HBF cases review for Topic to Sub Agent rename issue<span class="tag tag-internal">Internal</span></td>
+          <td class="dur">30 min</td>
+        </tr>
+        <tr>
+          <td class="date">21 May 2026</td>
+          <td class="subject"><strong>HBF Agentforce Issues — SF Engineer Review</strong><span class="tag tag-internal">Internal</span></td>
+          <td class="dur">1 hr</td>
+        </tr>
+        <tr>
+          <td class="date">19 May 2026</td>
+          <td class="subject">HBF Priority Cases Status Tracker Update — added Closed cases<span class="tag tag-internal">Internal</span></td>
+          <td class="dur">15 min</td>
+        </tr>
+        <tr>
+          <td class="date">19 May 2026</td>
+          <td class="subject">HBF Red Account: Internal Checkpoint Call<span class="tag tag-red">Red Account</span></td>
+          <td class="dur">30 min</td>
+        </tr>
+        <tr>
+          <td class="date">18 May 2026</td>
+          <td class="subject">HBF Open Cases review &amp; Excel update<span class="tag tag-internal">Internal</span></td>
+          <td class="dur">45 min</td>
+        </tr>
+        <tr>
+          <td class="date">12 May 2026</td>
+          <td class="subject">HBF Red Account: Internal Checkpoint Call<span class="tag tag-red">Red Account</span></td>
+          <td class="dur">30 min</td>
+        </tr>
+        <tr>
+          <td class="date">24 Apr 2026</td>
+          <td class="subject">HBF Red Account: Discovery Call<span class="tag tag-red">Red Account</span></td>
+          <td class="dur">30 min</td>
+        </tr>
+        <tr>
+          <td class="date">20 Apr 2026</td>
+          <td class="subject">HBF Issues Canvas update<span class="tag tag-internal">Internal</span></td>
+          <td class="dur">30 min</td>
+        </tr>
+        <tr>
+          <td class="date">20 Apr 2026</td>
+          <td class="subject">Salesforce / Slalom Sync on HBF Rollout<span class="tag tag-internal">Internal</span><br><em>Katie optional — project delivery status, risks, support required from Salesforce</em></td>
+          <td class="dur">25 min</td>
+        </tr>
+        <tr>
+          <td class="date">13 Apr 2026</td>
+          <td class="subject">HBF Slack Channel Creation<span class="tag tag-internal">Internal</span></td>
+          <td class="dur">30 min</td>
+        </tr>
+        <tr>
+          <td class="date">10 Apr 2026</td>
+          <td class="subject">HBF AF issues investigation<span class="tag tag-internal">Internal</span></td>
+          <td class="dur">30 min</td>
+        </tr>
+        <tr>
+          <td class="date">9 Apr 2026</td>
+          <td class="subject">HBF AF issues investigation<span class="tag tag-internal">Internal</span></td>
+          <td class="dur">45 min</td>
+        </tr>
+        <tr>
+          <td class="date">24 Mar 2026</td>
+          <td class="subject">HBF Intelligent Processing consumption Qs for Slalom<span class="tag tag-internal">Internal</span></td>
+          <td class="dur">15 min</td>
+        </tr>
+        <tr>
+          <td class="date">17 Mar 2026</td>
+          <td class="subject">HBF Consumption Plan<span class="tag tag-internal">Internal</span></td>
+          <td class="dur">30 min</td>
+        </tr>
+        <tr>
+          <td class="date">15 Mar 2026</td>
+          <td class="subject">HBF Account Review<span class="tag tag-internal">Internal</span></td>
+          <td class="dur">15 min</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      <strong>Summary:</strong> HBF is a red account with active Agentforce issues — a lot of Katie's work here is internal triage and escalation (Red Account checkpoint calls, engineer reviews, case tracker updates, ADR session). The issues appear to centre around Agentforce sub-agent/topic rename bugs and Intelligent Processing consumption questions. Katie has been involved since mid-March but the volume has picked up significantly from late April onwards.
+    </div>
+
+    <footer>Generated 29 May 2026 · Source: Salesforce Org62</footer>
+  </div>
+</body>
+</html>
